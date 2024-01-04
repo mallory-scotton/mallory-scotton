@@ -69,7 +69,7 @@
 <br/>
 
 <div align="center">
-<a href='buymeacoffee.com/?via=malloryscotton' target='_blank'><img height='64' style='border:0px;height:64px;' src='https://uc80e5ba3058c2d15b2a77972a8b.previews.dropboxusercontent.com/p/thumb/ACJTTQT2jO7RIwCtcvs60D0qwNzIvEJ-ZuNhpFvlaZ6L81aMgz4-ZROKM5i7GvuXFamsi0I7BEhsKkmwoUL0CDuLbC8-SUDj21gm3JlMO7RIyiDqFCvoNJacZ8gGnBX5Fs77AUxDdZNnmk-2WxF73gyVs4di7-7qempLFWA1hTKZudZ1CXvztTp0B2xhrgBj8oXVS5eXZK9uyLE7mwJlLwN0FsgZg22hUHg87oWh3QcPHpQylXfokMmKNXNFM9beiHqYvFAvGzfesRT_zc7w9-pk3bWJdfjR_0n_1seNPqOqTar_wr4tyFWTY-s-cDAu0YjG6coQA6HbAtwbLFTrfxhW/p.png' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://www.buymeacoffee.com/malloryscotton' target='_blank'><img height='64' style='border:0px;height:64px;' src='https://uc80e5ba3058c2d15b2a77972a8b.previews.dropboxusercontent.com/p/thumb/ACJTTQT2jO7RIwCtcvs60D0qwNzIvEJ-ZuNhpFvlaZ6L81aMgz4-ZROKM5i7GvuXFamsi0I7BEhsKkmwoUL0CDuLbC8-SUDj21gm3JlMO7RIyiDqFCvoNJacZ8gGnBX5Fs77AUxDdZNnmk-2WxF73gyVs4di7-7qempLFWA1hTKZudZ1CXvztTp0B2xhrgBj8oXVS5eXZK9uyLE7mwJlLwN0FsgZg22hUHg87oWh3QcPHpQylXfokMmKNXNFM9beiHqYvFAvGzfesRT_zc7w9-pk3bWJdfjR_0n_1seNPqOqTar_wr4tyFWTY-s-cDAu0YjG6coQA6HbAtwbLFTrfxhW/p.png' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </div>
 
 <br/>

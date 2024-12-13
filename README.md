@@ -11,9 +11,9 @@
 
 <div align="center">
  
- 🔭 I’m currently working on **a torrent client**
+ 🔭 I’m currently working on **[Moon Home Theater](https://github.com/moon-software-team/moon-home-theater)**
  
- 🌱 I’m currently learning **C at {EPITECH}**
+ 🌱 I’m currently learning **at {EPITECH}**
 
 💬 Ask me about **Node.js, React, Electron... or anything [here](https://github.com/mallory-scotton/mallory-scotton/issues)**
 

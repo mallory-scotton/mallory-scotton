@@ -1,3 +1,5 @@
+<!-- HEADER SECTION -->
+
 <div>
   <a href="https://mscotton.framer.website" target="_blank">
     <img align="left" src="./name.png" alt="Mallory SCOTTON" height="56" />
@@ -10,30 +12,49 @@
   </a>
 </div>
 
-<div>
-  <a href="#" target="_blank">
-    <img src="./hero.svg" alt="Hero" />
-  </a>
-</div>
+<!-- HERO SECTION -->
 
----
+<picture>
+  <img src="./hero.svg" alt="Hero" />
+</picture>
 
-<a href="#" target="_blank">
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
+
+<!-- ABOUT ME SECTION -->
+
+<picture>
   <img src="./aboutme.svg" alt="About Me">
-</a>
+</picture>
 
----
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
 
-<a href="#" target="_blank">
+<!-- EXPERIENCE SECTION -->
+
+<picture>
   <img src="./experience.svg" alt="Experience">
-</a>
+</picture>
 
----
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
 
-<a href="#" target="_blank">
+<!-- FRIENDS SECTION -->
+
+<picture>
   <img src="./friends.svg" alt="Friends">
-</a>
+</picture>
 
----
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
 
-<p align="right">Last updated by Mallow on August 18, 2025, 17:58</p>
+<!-- FOOTER SECTION -->
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img align="right" src="./lastupdate.svg" alt="Last Update">
+</picture>

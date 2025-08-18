@@ -1,15 +1,13 @@
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-  <a href="WEBSITE_URL" target="_blank">
-    <img src="./name.png" alt="Mallory SCOTTON" height="56" />
+<div>
+  <a href="https://mscotton.framer.website" target="_blank">
+    <img align="left" src="./name.png" alt="Mallory SCOTTON" height="56" />
   </a>
-  <div>
-    <a href="LINKEDIN_URL" target="_blank">
-      <img src="./linkedin.png" alt="LinkedIn" height="56" />
-    </a>
-    <a href="RESUME_URL" target="_blank" style="margin-left: 10px;">
-      <img src="./resume.png" alt="Resume" height="56" />
-    </a>
-  </div>
+  <a href="https://www.linkedin/in/mallory-scotton" target="_blank">
+    <img align="right" src="./linkedin.png" alt="LinkedIn" height="56" />
+  </a>
+  <a href="https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link" target="_blank">
+    <img align="right" src="./resume.png" alt="Resume" height="56" />
+  </a>
 </div>
 
 <div>

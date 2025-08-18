@@ -1,3 +1,8 @@
+<!-- LEGIBILITY -->
+<picture>
+  <img src="./legibility.svg" alt="">
+</picture>
+
 <!-- HEADER SECTION -->
 
 <div>

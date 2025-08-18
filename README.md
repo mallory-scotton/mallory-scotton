@@ -42,6 +42,26 @@
   <img src="./divider.svg" width="100%">
 </picture>
 
+<!-- PROJECTS SECTION -->
+
+<picture>
+  <img src="./projects.svg" alt="Experience">
+</picture>
+
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
+
+<!-- STACKS SECTION -->
+
+<picture>
+  <img src="./stacks.svg" alt="Experience">
+</picture>
+
+<picture>
+  <img src="./divider.svg" width="100%">
+</picture>
+
 <!-- FRIENDS SECTION -->
 
 <picture>

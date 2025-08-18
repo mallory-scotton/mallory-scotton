@@ -5,7 +5,7 @@
 
 <!-- HEADER SECTION -->
 
-<div>
+<div align="center">
   <a href="https://mscotton.framer.website" target="_blank">
     <img align="left" src="./name.png" alt="Mallory SCOTTON" height="56" />
   </a>
@@ -45,33 +45,58 @@
 
 <p><!-- INVISIBLE SPACING --></p>
 
-<picture>
-  <img src="./planifique-helpdesk.svg" alt="Planifique - Help Desk">
-</picture>
+<div align="center">
+  <a href="https://www.planifique.com" target="_blank">
+    <img align="left" src="./company/planifique.svg" alt="Planifique">
+  </a>
+  <picture>
+    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk">
+  </picture>
+</div>
 
 <p><!-- INVISIBLE SPACING --></p>
 
-<picture>
-  <img src="./epitech-cobra.svg" alt="EPITECH - Topic Manager">
-</picture>
+<div align="center">
+  <a href="https://www.epitech.com" target="_blank">
+    <img align="left" src="./company/epitech.svg" alt="Epitech">
+  </a>
+  <picture>
+    <img align="right" src="./experience/epitech-cobra.svg" alt="Topic Manager">
+  </picture>
+</div>
 
 <p><!-- INVISIBLE SPACING --></p>
 
-<picture>
-  <img src="./sbs-internship.svg" alt="SBS - Cloud Development Intern">
-</picture>
+<div align="center">
+  <a href="https://www.sbs-software.com" target="_blank">
+    <img align="left" src="./company/sbs.svg" alt="SBS">
+  </a>
+  <picture>
+    <img align="right" src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern">
+  </picture>
+</div>
 
 <p><!-- INVISIBLE SPACING --></p>
 
-<picture>
-  <img src="./fiverr-freelance.svg" alt="Fiverr - Freelance Developer">
-</picture>
+<div align="center">
+  <a href="https://www.fiverr.com" target="_blank">
+    <img align="left" src="./company/fiverr.svg" alt="Fiverr">
+  </a>
+  <picture>
+    <img align="right" src="./experience/fiverr-freelance.svg" alt="Freelance Developer">
+  </picture>
+</div>
 
 <p><!-- INVISIBLE SPACING --></p>
 
-<picture>
-  <img src="./soprabankingsoftware-internship.svg" alt="Sopra Banking Software - Intern">
-</picture>
+<div align="center">
+  <a href="https://www.sbs-software.com" target="_blank">
+    <img align="left" src="./company/sopra-banking-software.svg" alt="Sopra Banking Software">
+  </a>
+  <picture>
+    <img align="right" src="./experience/sbs-intern.svg" alt="Intern">
+  </picture>
+</div>
 
 <p><!-- INVISIBLE SPACING --></p>
 

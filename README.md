@@ -11,20 +11,28 @@
 </div>
 
 <div>
-  <img src="./hero.svg" alt="Hero" />
+  <a href="#" target="_blank">
+    <img src="./hero.svg" alt="Hero" />
+  </a>
 </div>
 
 ---
 
-<img src="./aboutme.svg" alt="About Me">
+<a href="#" target="_blank">
+  <img src="./aboutme.svg" alt="About Me">
+</a>
 
 ---
 
-<img src="./experience.svg" alt="Experience">
+<a href="#" target="_blank">
+  <img src="./experience.svg" alt="Experience">
+</a>
 
 ---
 
-<img src="./friends.svg" alt="Friends">
+<a href="#" target="_blank">
+  <img src="./friends.svg" alt="Friends">
+</a>
 
 ---
 

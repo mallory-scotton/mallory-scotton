@@ -13,3 +13,19 @@
 <div>
   <img src="./hero.svg" alt="Hero" />
 </div>
+
+---
+
+<img src="./aboutme.svg" alt="About Me">
+
+---
+
+<img src="./experience.svg" alt="Experience">
+
+---
+
+<img src="./friends.svg" alt="Friends">
+
+---
+
+<p align="right">Last updated by Mallow on August 18, 2025, 17:58</p>

@@ -43,6 +43,38 @@
   <img src="./experience.svg" alt="Experience">
 </picture>
 
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img src="./planifique-helpdesk.svg" alt="Planifique - Help Desk">
+</picture>
+
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img src="./epitech-cobra.svg" alt="EPITECH - Topic Manager">
+</picture>
+
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img src="./sbs-internship.svg" alt="SBS - Cloud Development Intern">
+</picture>
+
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img src="./fiverr-freelance.svg" alt="Fiverr - Freelance Developer">
+</picture>
+
+<p><!-- INVISIBLE SPACING --></p>
+
+<picture>
+  <img src="./soprabankingsoftware-internship.svg" alt="Sopra Banking Software - Intern">
+</picture>
+
+<p><!-- INVISIBLE SPACING --></p>
+
 <picture>
   <img src="./divider.svg" width="100%">
 </picture>

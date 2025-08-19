@@ -43,62 +43,62 @@
   <img src="./experience.svg" alt="Experience">
 </picture>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <div align="center">
   <a href="https://www.planifique.com" target="_blank">
-    <img align="left" src="./company/planifique.svg" alt="Planifique">
+    <img align="left" src="./company/planifique.svg" alt="Planifique" width="45%">
   </a>
   <picture>
-    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk">
+    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk" width="45%">
   </picture>
 </div>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <div align="center">
   <a href="https://www.epitech.com" target="_blank">
-    <img align="left" src="./company/epitech.svg" alt="Epitech">
+    <img src="./company/epitech.svg" alt="Epitech" width="45%">
   </a>
   <picture>
-    <img align="right" src="./experience/epitech-cobra.svg" alt="Topic Manager">
+    <img src="./experience/epitech-cobra.svg" alt="Topic Manager" width="45%">
   </picture>
 </div>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <div align="center">
   <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sbs.svg" alt="SBS">
+    <img src="./company/sbs.svg" alt="SBS" width="45%">
   </a>
   <picture>
-    <img align="right" src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern">
+    <img src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern" width="45%">
   </picture>
 </div>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <div align="center">
   <a href="https://www.fiverr.com" target="_blank">
-    <img align="left" src="./company/fiverr.svg" alt="Fiverr">
+    <img src="./company/fiverr.svg" alt="Fiverr" width="45%">
   </a>
   <picture>
-    <img align="right" src="./experience/fiverr-freelance.svg" alt="Freelance Developer">
+    <img src="./experience/fiverr-freelance.svg" alt="Freelance Developer" width="45%">
   </picture>
 </div>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <div align="center">
   <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sopra-banking-software.svg" alt="Sopra Banking Software">
+    <img src="./company/sopra-banking-software.svg" alt="Sopra Banking Software" width="45%">
   </a>
   <picture>
-    <img align="right" src="./experience/sbs-intern.svg" alt="Intern">
+    <img src="./experience/sbs-intern.svg" alt="Intern" width="45%">
   </picture>
 </div>
 
-<p><!-- INVISIBLE SPACING --></p>
+<br><br>
 
 <picture>
   <img src="./divider.svg" width="100%">

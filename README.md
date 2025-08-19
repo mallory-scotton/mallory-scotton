@@ -107,8 +107,12 @@
 <!-- PROJECTS SECTION -->
 
 <picture>
-  <img src="./projects.svg" alt="Experience">
+  <img asrc="./projects.svg" alt="Projects">
 </picture>
+
+<a href="https://github.com/mallory-scotton/pathtracer" target="_blank">
+  <img align="center" src="./project/glsl-pathtracer.svg" alt="GLSL-PathTracer">
+</a>
 
 <picture>
   <img src="./divider.svg" width="100%">
@@ -117,7 +121,7 @@
 <!-- STACKS SECTION -->
 
 <picture>
-  <img src="./stacks.svg" alt="Experience">
+  <img src="./stacks.svg" alt="Stacks">
 </picture>
 
 <picture>

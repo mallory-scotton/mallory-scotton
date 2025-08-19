@@ -114,6 +114,10 @@
   <img align="center" src="./project/glsl-pathtracer.svg" alt="GLSL-PathTracer">
 </a>
 
+<a href="https://github.com/mallory-scotton/arcade" target="_blank">
+  <img align="center" src="./project/arcade.svg" alt="Arcade">
+</a>
+
 <picture>
   <img src="./divider.svg" width="100%">
 </picture>

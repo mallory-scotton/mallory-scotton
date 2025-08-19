@@ -107,7 +107,7 @@
 <!-- PROJECTS SECTION -->
 
 <picture>
-  <img asrc="./projects.svg" alt="Projects">
+  <img src="./projects.svg" alt="Projects">
 </picture>
 
 <a href="https://github.com/mallory-scotton/pathtracer" target="_blank">

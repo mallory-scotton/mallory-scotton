@@ -146,5 +146,9 @@
 <p><!-- INVISIBLE SPACING --></p>
 
 <picture>
+  <img align="left" src="./thanks.svg" alt="Thanks for stopping by !">
+</picture>
+
+<picture>
   <img align="right" src="./lastupdate.svg" alt="Last Update">
 </picture>

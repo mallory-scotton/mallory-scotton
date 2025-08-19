@@ -47,10 +47,10 @@
 
 <div align="center">
   <a href="https://www.planifique.com" target="_blank">
-    <img align="left" src="./company/planifique.svg" alt="Planifique" width="45%">
+    <img align="left" src="./company/planifique.svg" alt="Planifique">
   </a>
   <picture>
-    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk" width="45%">
+    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk">
   </picture>
 </div>
 
@@ -58,10 +58,10 @@
 
 <div align="center">
   <a href="https://www.epitech.com" target="_blank">
-    <img align="left" src="./company/epitech.svg" alt="Epitech" width="45%">
+    <img align="left" src="./company/epitech.svg" alt="Epitech">
   </a>
   <picture>
-    <img align="right" src="./experience/epitech-cobra.svg" alt="Topic Manager" width="45%">
+    <img align="right" src="./experience/epitech-cobra.svg" alt="Topic Manager">
   </picture>
 </div>
 
@@ -69,10 +69,10 @@
 
 <div align="center">
   <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sbs.svg" alt="SBS" width="45%">
+    <img align="left" src="./company/sbs.svg" alt="SBS">
   </a>
   <picture>
-    <img align="right" src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern" width="45%">
+    <img align="right" src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern">
   </picture>
 </div>
 
@@ -80,10 +80,10 @@
 
 <div align="center">
   <a href="https://www.fiverr.com" target="_blank">
-    <img align="left" src="./company/fiverr.svg" alt="Fiverr" width="45%">
+    <img align="left" src="./company/fiverr.svg" alt="Fiverr">
   </a>
   <picture>
-    <img align="right" src="./experience/fiverr-freelance.svg" alt="Freelance Developer" width="45%">
+    <img align="right" src="./experience/fiverr-freelance.svg" alt="Freelance Developer">
   </picture>
 </div>
 
@@ -91,10 +91,10 @@
 
 <div align="center">
   <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sopra-banking-software.svg" alt="Sopra Banking Software" width="45%">
+    <img align="left" src="./company/sopra-banking-software.svg" alt="Sopra Banking Software">
   </a>
   <picture>
-    <img align="right" src="./experience/sbs-intern.svg" alt="Intern" width="45%">
+    <img align="right" src="./experience/sbs-intern.svg" alt="Intern">
   </picture>
 </div>
 

@@ -142,13 +142,13 @@
 
 <div>
   <a href="https://www.github.com/Hugo-Cathelain" target="_blank">
-    <img src="./friend/hugo-cathelain.svg" alt="Hugo Cathelain" width="30%">
+    <img src="./friend/hugo-cathelain.svg" alt="Hugo Cathelain" width="33%">
   </a>
   <a href="https://www.github.com/natan-fievet" target="_blank">
-    <img src="./friend/nathan-fievet.svg" alt="Nathan Fievet" width="30%">
+    <img src="./friend/nathan-fievet.svg" alt="Nathan Fievet" width="33%">
   </a>
   <a href="https://www.github.com/Omegalpha28" target="_blank">
-    <img src="./friend/ossan-msoili.svg" alt="Ossan Msoili" width="30%">
+    <img src="./friend/ossan-msoili.svg" alt="Ossan Msoili" width="33%">
   </a>
 </div>
 

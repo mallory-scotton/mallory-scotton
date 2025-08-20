@@ -35,28 +35,28 @@
 
 <div align="center">
   <picture>
-    <img align="left" src="./about/1L.svg">
+    <img align="left" src="./about/1R.svg">
   </picture>
   <picture>
-    <img align="right" src="./about/1R.svg">
-  </picture>
-</div>
-
-<div align="center">
-  <picture>
-    <img align="left" src="./about/2L.svg">
-  </picture>
-  <picture>
-    <img align="right" src="./about/2R.svg">
+    <img align="right" src="./about/1L.svg">
   </picture>
 </div>
 
 <div align="center">
   <picture>
-    <img align="left" src="./about/3L.svg">
+    <img align="left" src="./about/2R.svg">
   </picture>
   <picture>
-    <img align="right" src="./about/3R.svg">
+    <img align="right" src="./about/2L.svg">
+  </picture>
+</div>
+
+<div align="center">
+  <picture>
+    <img align="left" src="./about/3R.svg">
+  </picture>
+  <picture>
+    <img align="right" src="./about/3L.svg">
   </picture>
 </div>
 

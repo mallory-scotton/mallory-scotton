@@ -89,18 +89,18 @@ function friendToSVG(name, title, company, website) {
     const filename = name.replace(/\s/g, '-').toLowerCase();
 
     // Create the generated directory if it doesn't exist
-    if (fs.existsSync('generated') === false) {
-        fs.mkdirSync('generated');
+    if (fs.existsSync('generated/friends') === false) {
+        fs.mkdirSync('generated/friends', { recursive: true });
     }
 
     // Check if the SVG file already exists
-    if (fs.existsSync(`generated/${filename}.svg`)) {
+    if (fs.existsSync(`generated/friends/${filename}.svg`)) {
         console.log(`SVG file for ${name} already exists.`);
         return;
     }
 
     // Write the SVG file
-    fs.writeFileSync(`generated/${filename}.svg`, friend, 'utf8', (err) => {
+    fs.writeFileSync(`generated/friends/${filename}.svg`, friend, 'utf8', (err) => {
         if (err) {
             console.error("Error writing SVG file:", err);
         } else {

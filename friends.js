@@ -54,13 +54,16 @@ function generateFriendSVG(name, title, company, website) {
     const infoPath = Inter.light.getPath(`${capitalize(title)} — ${capitalize(company)}`, 0, 52.75, 16.5, { letterSpacing: 0.05 });
     const infoSVG = infoPath.toSVG();
 
+    // Only get the domain and extension from the website, get rid of https://www. and the endpoint
+    const domain = website.replace(/https:\/\/www\./, '').replace(/\/.*$/, '');
+
     // Generate the SVG representation of the friend's website
-    const websPath = Inter.regular.getPath(website, 0, 86.75, 15.6, { letterSpacing: 0.02 });
+    const websPath = Inter.regular.getPath(domain, 0, 86.75, 15.6, { letterSpacing: 0.02 });
     const websSVG = websPath.toSVG();
 
     // Generate the final SVG
     const SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="327" height="97" viewBox="0 0 327 97" fill="none">
-    <g transform="translate(${websPath.getBoundingBox().x2},72)">
+    <g transform="translate(${websPath.getBoundingBox().x2 + 2},72)">
         <path d="M5.03556 17.5363L4.04102 16.5417L14.3313 6.25141H8.32589V4.83203H16.7453V13.2514H15.3259V7.246L5.03556 17.5363Z" fill="#F2F2F2"/>
     </g>
     ${fill(nameSVG, '#F2F2F2')}

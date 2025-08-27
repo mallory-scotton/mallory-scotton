@@ -1,197 +1,129 @@
-<!-- LEGIBILITY -->
+<!--
+By
+ ███▄ ▄███▓ ▄▄▄       ██▓     ██▓     ▒█████   █     █░
+▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓██▒    ▒██▒  ██▒▓█░ █ ░█░
+▓██    ▓██░▒██  ▀█▄  ▒██░    ▒██░    ▒██░  ██▒▒█░ █ ░█ 
+▒██    ▒██ ░██▄▄▄▄██ ▒██░    ▒██░    ▒██   ██░░█░ █ ░█ 
+▒██▒   ░██▒ ▓█   ▓██▒░██████▒░██████▒░ ████▓▒░░░██▒██▓ 
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▓░▒ ▒  
+░  ░      ░  ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░  
+░      ░     ░   ▒     ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░  
+       ░         ░  ░    ░  ░    ░  ░    ░ ░      ░    
+Generated on 27/08/2025
+-->
+
+<!-- BEGIN LEGIBILITY -->
+
 <picture>
-  <img src="./legibility.svg" alt="">
+  <img src="generated/legibility.svg"  />
 </picture>
 
-<!-- HEADER SECTION -->
+<!-- END LEGIBILITY -->
+
+<!-- BEGIN HEADER -->
 
 <div align="center">
   <a href="https://mscotton.framer.website" target="_blank">
-    <img align="left" src="./name.png" alt="Mallory SCOTTON" height="56" />
+    <img src="generated/profile.svg" align="left" height="56" alt="Mallory Scotton" />
   </a>
   <a href="https://www.linkedin.com/in/mallory-scotton" target="_blank">
-    <img align="right" src="./component/linkedin.svg" alt="LinkedIn" height="56" />
+    <img src="generated/links/linkedin.svg" align="right" height="56" alt="LinkedIn" />
   </a>
   <a href="https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link" target="_blank">
-    <img align="right" src="./component/resume.svg" alt="Resume" height="56" />
+    <img src="generated/links/resume.svg" align="right" height="56" alt="Resume" />
   </a>
 </div>
 
-<!-- HERO SECTION -->
+<!-- END HEADER -->
+
+<!-- BEGIN HERO -->
 
 <picture>
-  <img src="./hero.svg" alt="Hero" />
+  <img src="generated/hero.svg" alt="Mallow's Hero Image" />
 </picture>
 
+<!-- END HERO -->
+
 <picture>
-  <img src="./divider.svg" width="100%">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
 
-<!-- ABOUT ME SECTION -->
+<!-- BEGIN ABOUT-ME -->
+
+
+
+<!-- END ABOUT-ME -->
 
 <picture>
-  <img src="./aboutme.svg" alt="About Me">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
 
-<div align="center">
-  <picture>
-    <img align="left" src="./about/1R.svg">
-  </picture>
-  <picture>
-    <img align="right" src="./about/1L.svg">
-  </picture>
-</div>
+<!-- BEGIN EXPERIENCE -->
 
-<div align="center">
-  <picture>
-    <img align="left" src="./about/2R.svg">
-  </picture>
-  <picture>
-    <img align="right" src="./about/2L.svg">
-  </picture>
-</div>
 
-<div align="center">
-  <picture>
-    <img align="left" src="./about/3R.svg">
-  </picture>
-  <picture>
-    <img align="right" src="./about/3L.svg">
-  </picture>
-</div>
+
+<!-- END EXPERIENCE -->
 
 <picture>
-  <img src="./divider.svg" width="100%">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
 
-<!-- EXPERIENCE SECTION -->
+<!-- BEGIN PROJECTS -->
+
+
+
+<!-- END PROJECTS -->
 
 <picture>
-  <img src="./experience.svg" alt="Experience">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
 
-<br><br>
+<!-- BEGIN STACKS -->
 
-<div align="center">
-  <a href="https://www.planifique.com" target="_blank">
-    <img align="left" src="./company/planifique.svg" alt="Planifique">
-  </a>
-  <picture>
-    <img align="right" src="./experience/planifique-helpdesk.svg" alt="Help Desk">
-  </picture>
-</div>
 
-<br><br>
 
-<div align="center">
-  <a href="https://www.epitech.com" target="_blank">
-    <img align="left" src="./company/epitech.svg" alt="Epitech">
-  </a>
-  <picture>
-    <img align="right" src="./experience/epitech-cobra.svg" alt="Topic Manager">
-  </picture>
-</div>
-
-<br><br>
-
-<div align="center">
-  <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sbs.svg" alt="SBS">
-  </a>
-  <picture>
-    <img align="right" src="./experience/sbs-cloud-intern.svg" alt="Cloud Development Intern">
-  </picture>
-</div>
-
-<br><br>
-
-<div align="center">
-  <a href="https://www.fiverr.com" target="_blank">
-    <img align="left" src="./company/fiverr.svg" alt="Fiverr">
-  </a>
-  <picture>
-    <img align="right" src="./experience/fiverr-freelance.svg" alt="Freelance Developer">
-  </picture>
-</div>
-
-<br><br>
-
-<div align="center">
-  <a href="https://www.sbs-software.com" target="_blank">
-    <img align="left" src="./company/sopra-banking-software.svg" alt="Sopra Banking Software">
-  </a>
-  <picture>
-    <img align="right" src="./experience/sbs-intern.svg" alt="Intern">
-  </picture>
-</div>
-
-<br><br>
+<!-- END STACKS -->
 
 <picture>
-  <img src="./divider.svg" width="100%">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
 
-<!-- PROJECTS SECTION -->
+<!-- BEGIN FRIENDS -->
 
 <picture>
-  <img src="./projects.svg" alt="Projects">
-</picture>
-
-<a href="https://github.com/mallory-scotton/pathtracer" target="_blank">
-  <img align="center" src="./project/glsl-pathtracer.svg" alt="GLSL-PathTracer">
-</a>
-
-<a href="https://github.com/mallory-scotton/arcade" target="_blank">
-  <img align="center" src="./project/arcade.svg" alt="Arcade">
-</a>
-
-<picture>
-  <img src="./divider.svg" width="100%">
-</picture>
-
-<!-- STACKS SECTION -->
-
-<picture>
-  <img src="./stacks.svg" alt="Stacks">
-</picture>
-
-<picture>
-  <img src="./divider.svg" width="100%">
-</picture>
-
-<!-- FRIENDS SECTION -->
-
-<picture>
-  <img src="./friends.svg" alt="Friends">
+  <img src="generated/titles/friends.svg" alt="Friends" />
 </picture>
 
 <br>
 
 <div>
-  <a href="https://www.github.com/Hugo-Cathelain" target="_blank">
-    <img src="./friend/hugo-cathelain.svg" alt="Hugo Cathelain" width="33%">
-  </a>
   <a href="https://www.github.com/natan-fievet" target="_blank">
-    <img src="./friend/nathan-fievet.svg" alt="Nathan Fievet" width="33%">
+    <img src="generated/friends/nathan-fievet.svg" width="33%" alt="Nathan Fievet" />
+  </a>
+  <a href="https://www.github.com/Hugo-Cathelain" target="_blank">
+    <img src="generated/friends/hugo-cathelain.svg" width="33%" alt="Hugo Cathelain" />
   </a>
   <a href="https://www.github.com/Omegalpha28" target="_blank">
-    <img src="./friend/ossan-msoili.svg" alt="Ossan Msoili" width="33%">
+    <img src="generated/friends/ossan-msoili.svg" width="33%" alt="Ossan Msoili" />
   </a>
 </div>
 
 <br>
 
-<picture>
-  <img src="./divider.svg" width="100%">
-</picture>
+<div>
+  <a href="https://www.github.com/bombabobo" target="_blank">
+    <img src="generated/friends/raphael-ostier.svg" width="33%" alt="Raphaël Ostier" />
+  </a>
+</div>
 
-<!-- FOOTER SECTION -->
-<br><br>
-
-<picture>
-  <img align="left" src="./thanks.svg" alt="Thanks for stopping by !">
-</picture>
+<!-- END FRIENDS -->
 
 <picture>
-  <img align="right" src="./lastupdate.svg" alt="Last Update">
+  <img src="generated/divider.svg" width="100%" alt="---" />
 </picture>
+
+<!-- BEGIN FOOTER -->
+
+
+
+<!-- END FOOTER -->

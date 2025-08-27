@@ -1,0 +1,113 @@
+{
+  "$schema": "./config.schema.json",
+  "profile": {
+    "name": "Mallory SCOTTON",
+    "pseudo": "Mallow",
+    "title": "Full-Stack Developer",
+    "url": "https://mscotton.framer.website",
+    "signature": "file://images/signature.png"
+  },
+  "friends": [
+    {
+      "name": "Nathan Fievet",
+      "title": "Student",
+      "company": "Epitech",
+      "website": "https://www.github.com/natan-fievet"
+    },
+    {
+      "name": "Hugo Cathelain",
+      "title": "Student",
+      "company": "Epitech",
+      "website": "https://www.github.com/Hugo-Cathelain"
+    },
+    {
+      "name": "Ossan Msoili",
+      "title": "Student",
+      "company": "Epitech",
+      "website": "https://www.github.com/Omegalpha28"
+    },
+    {
+      "name": "Raphaël Ostier",
+      "title": "Student",
+      "company": "Epitech",
+      "website": "https://www.github.com/bombabobo"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Planifique",
+      "position": "Help Desk",
+      "website": "https://www.planifique.com",
+      "start": "08-2025",
+      "end": "09-2025",
+      "description": "Provided daily IT support and contributed to continuous improvement initiatives.\nHandled user account management (AD, Microsoft 365), access rights, hardware/software troubleshooting, and internal tool development.\nLed automation projects, onboarding/offboarding systems, and ran cybersecurity awareness campaigns (phishing, impersonation).",
+      "location": {
+        "city": "Geneva",
+        "country": "Switzerland",
+        "type": "hybrid"
+      }
+    },
+    {
+      "company": "Epitech",
+      "position": "Topic Manager – Cobra",
+      "website": "https://www.epitech.eu",
+      "start": "12-2023",
+      "end": null,
+      "description": "Led workshops to introduce prospective students to computer science fundamentals.\nManaged educational content, organized thematic activities, and built internal tools to support event logistics.",
+      "location": {
+        "city": "Lyon",
+        "country": "France",
+        "type": "hybrid"
+      }
+    },
+    {
+      "company": "SBS",
+      "position": "Cloud Development Intern",
+      "website": "https://www.sbs-software.com",
+      "start": "08-2024",
+      "end": "01-2025",
+      "description": "As part of my second-year internship at EPITECH, I analyzed trace data from the \"Loan Servicing\" software and developed visual solutions to display this data in SBCP Cloud.\nWorked on cloud applications, dashboards, and data visualization tools.",
+      "location": {
+        "city": "Annecy",
+        "country": "France",
+        "type": "hybrid"
+      }
+    },
+    {
+      "company": "Fiverr",
+      "position": "Freelance Developer",
+      "website": "https://www.fiverr.com",
+      "start": "01-2021",
+      "end": "08-2023",
+      "description": "Designed and developed websites, desktop and web applications. Also delivered graphic design, UX, and UI solutions for a range of clients across various industries.",
+      "location": {
+        "city": "Annecy",
+        "country": "France",
+        "type": "remote"
+      }
+    },
+    {
+      "company": "Sopra Banking Software",
+      "position": "Intern",
+      "website": "https://www.sbs-software.com",
+      "start": "05-2023",
+      "end": "05-2023",
+      "description": "Created logos, branding guidelines, and video content for internal communications, including subtitling and translation work.",
+      "location": {
+        "city": "Annecy",
+        "country": "France",
+        "type": "onsite"
+      }
+    }
+  ],
+  "links": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mallory-scotton"
+    },
+    {
+      "name": "Resume",
+      "url": "https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link"
+    }
+  ]
+}

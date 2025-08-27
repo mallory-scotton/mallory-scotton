@@ -45,7 +45,7 @@ jobs:
           git rm -rf . || true
 
           # Copy back the fresh generated files
-          cp -r ../output-temp/* .
+          cp -r ../temp/* .
 
           # Commit & push
           git add .

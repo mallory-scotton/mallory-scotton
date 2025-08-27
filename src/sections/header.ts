@@ -18,7 +18,7 @@ export function getHeaderSection(config: ProfileConfig): string {
         url: link.url,
         indent: 1,
         height: '56'
-      })
+      }, config.profile.repository)
     )
     .join('\n');
 
@@ -30,7 +30,7 @@ export function getHeaderSection(config: ProfileConfig): string {
     align: 'left',
     height: '56',
     indent: 1
-  });
+  }, config.profile.repository);
 
   return `<div align="center">\n${profile}\n${links}\n</div>`.trim();
 }

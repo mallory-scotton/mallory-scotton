@@ -12,14 +12,14 @@ export function getFooterSection(config: ProfileConfig): string {
     src: 'generated/thanks.svg',
     alt: 'Thanks for stopping by !',
     align: 'left'
-  });
+  }, config.profile.repository);
 
   // Last updated image
   const lastUpdate = image({
     src: 'generated/last-updated.svg',
     alt: 'Last Update',
     align: 'right'
-  });
+  }, config.profile.repository);
 
   // Return the footer section
   return `${thanks}\n\n${lastUpdate}`.trim();

@@ -14,18 +14,22 @@ export function generateReadme(config: ProfileConfig) {
   // Prepare content
   let content = fs.readFileSync('README.TEMPLATE', 'utf-8');
 
+  // Define the tokens for replacement
   const tokens = {
     'WATERMARK': WATERMARK,
-    'LEGIBILITY': image({ src: 'generated/legibility.svg' }),
+    'LEGIBILITY': image({ src: 'generated/legibility.svg' }, config.profile.repository),
     'HEADER': sections.getHeaderSection(config),
-    'HERO': image({ src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` }),
+    'HERO': image(
+      { src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` },
+      config.profile.repository
+    ),
     'ABOUT-ME': sections.getAboutMeSection(config),
     'EXPERIENCE': sections.getExperienceSection(config),
     'PROJECTS': sections.getProjectsSection(config),
     'STACKS': sections.getStacksSection(config),
     'FRIENDS': sections.getFriendsSection(config),
     'FOOTER': sections.getFooterSection(config),
-    'DIVIDER': image({ src: 'generated/divider.svg', alt: '---', width: '100%' })
+    'DIVIDER': image({ src: 'generated/divider.svg', alt: '---', width: '100%' }, config.profile.repository)
   };
 
   // Replace the sections

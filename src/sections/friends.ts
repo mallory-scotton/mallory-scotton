@@ -32,7 +32,7 @@ export function getFriendsSection(config: ProfileConfig): string {
           url: friend.website,
           indent: 1,
           alt: capitalize(friend.name)
-        })
+        }, config.profile.repository)
       )
       .join('\n');
     // Wrap images in a div
@@ -43,7 +43,7 @@ export function getFriendsSection(config: ProfileConfig): string {
   const title = image({
     src: 'generated/titles/friends.svg',
     alt: 'Friends'
-  });
+  }, config.profile.repository);
 
   // Return the friends section
   return [title, ...friendsSection].join('\n\n<br>\n\n').trim();

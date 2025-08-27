@@ -32,6 +32,12 @@ export interface Profile {
    * @description This is the file path to the user's signature image.
    */
   signature: string;
+
+  /**
+   * @brief Represents the repository URL of the user.
+   * @description This is the URL of the user's code repository.
+   */
+  repository: string;
 }
 
 /**

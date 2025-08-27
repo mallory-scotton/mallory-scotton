@@ -19,9 +19,12 @@
         },
         "signature": {
           "type": "string"
+        },
+        "repository": {
+          "type": "string"
         }
       },
-      "required": ["name", "title", "pseudo", "url", "signature"]
+      "required": ["name", "title", "pseudo", "url", "signature", "repository"]
     },
     "friends": {
       "type": "array",

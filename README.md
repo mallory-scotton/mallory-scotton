@@ -9,7 +9,7 @@ By
 ░  ░      ░  ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░  
 ░      ░     ░   ▒     ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░  
        ░         ░  ░    ░  ░    ░  ░    ░ ░      ░    
-Generated on 8/27/2025
+Generated on 27/08/2025
 -->
 
 <!-- BEGIN LEGIBILITY -->
@@ -124,6 +124,12 @@ Generated on 8/27/2025
 
 <!-- BEGIN FOOTER -->
 
+<picture>
+  <img src="generated/thanks.svg" align="left" alt="Thanks for stopping by !" />
+</picture>
 
+<picture>
+  <img src="generated/last-updated.svg" align="right" alt="Last Update" />
+</picture>
 
 <!-- END FOOTER -->

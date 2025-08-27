@@ -35,7 +35,8 @@ export type SVGFill =
   | `#${string}`
   | `rgb(${number}, ${number}, ${number})`
   | `rgba(${number}, ${number}, ${number}, ${number})`
-  | 'none';
+  | 'none'
+  | string;
 
 /**
  * @brief SVG Base

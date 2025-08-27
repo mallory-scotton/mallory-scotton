@@ -34,6 +34,9 @@ export function generateSVGs(config: ProfileConfig) {
   // Generate SVG for profile
   Generators.profile2svg(config).save(`generated/profile.svg`);
 
+  // Generate SVG for thanks message
+  Generators.thanks2svg('Thanks for stopping by!', config.profile.signature).save(`generated/thanks.svg`);
+
   // Generate SVG for titles
   SECTION_TITLES.forEach((title) => {
     Generators.title2svg(title).save(`generated/titles/${kebabcase(title)}.svg`);

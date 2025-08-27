@@ -213,6 +213,43 @@ export class SVG {
   }
 
   /**
+   * @brief Add a pattern to the SVG
+   * @description This method adds a pattern to the current SVG object.
+   * @param pattern - The pattern SVG element to add.
+   * @returns The added pattern SVG element.
+   */
+  public addPattern(pattern: SVGObject): SVGObject {
+    // Generate a unique ID for the pattern
+    const id = this._generateID('pattern-');
+
+    // Initialize patterns array if it doesn't exist
+    if (!this._self.children) {
+      this._self.children = [];
+    }
+
+    // Get the defs element
+    let defs: SVGObject | undefined = this._self.children?.find((c) => c.type === 'defs');
+    if (!defs) {
+      defs = { type: 'defs', children: [] } as SVGObject;
+      this._self.children?.push(defs);
+    }
+
+    // Ensure children exists
+    if (!defs.children) {
+      defs.children = [];
+    }
+
+    // Set the pattern ID
+    pattern.id = id;
+
+    // Add the pattern element to the defs
+    defs.children?.push(pattern);
+
+    // Return the added pattern element
+    return pattern;
+  }
+
+  /**
    * @brief Add an image to the SVG
    * @description This method adds an image element to the current SVG object.
    * @param src - The source URL of the image.

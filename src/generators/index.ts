@@ -6,3 +6,4 @@ export * from './titles.generator';
 export * from './divider.generator';
 export * from './legibility.generator';
 export * from './profile.generator';
+export * from './thanks.generator';

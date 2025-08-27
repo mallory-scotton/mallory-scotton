@@ -7,5 +7,9 @@ import { image } from './utils';
  * @description This function generates the About Me section of the profile.
  */
 export function getAboutMeSection(config: ProfileConfig): string {
-  return ``.trim();
+  // Generate the title image
+  const title = image({ src: 'generated/titles/about-me.svg', alt: 'About Me' }, config.profile.repository);
+
+  // Generate the content
+  return [title].join('\n\n').trim();
 }

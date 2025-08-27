@@ -1,0 +1,143 @@
+<!--
+By
+ ███▄ ▄███▓ ▄▄▄       ██▓     ██▓     ▒█████   █     █░
+▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓██▒    ▒██▒  ██▒▓█░ █ ░█░
+▓██    ▓██░▒██  ▀█▄  ▒██░    ▒██░    ▒██░  ██▒▒█░ █ ░█ 
+▒██    ▒██ ░██▄▄▄▄██ ▒██░    ▒██░    ▒██   ██░░█░ █ ░█ 
+▒██▒   ░██▒ ▓█   ▓██▒░██████▒░██████▒░ ████▓▒░░░██▒██▓ 
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▓░▒ ▒  
+░  ░      ░  ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░  
+░      ░     ░   ▒     ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░  
+       ░         ░  ░    ░  ░    ░  ░    ░ ░      ░    
+Generated on 27/08/2025
+-->
+
+<!-- BEGIN LEGIBILITY -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/legibility.svg"  />
+</picture>
+
+<!-- END LEGIBILITY -->
+
+<!-- BEGIN HEADER -->
+
+<div align="center">
+  <a href="https://mscotton.framer.website" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/profile.svg" align="left" height="56" alt="Mallory Scotton" />
+  </a>
+  <a href="https://www.linkedin.com/in/mallory-scotton" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/links/linkedin.svg" align="right" height="56" alt="LinkedIn" />
+  </a>
+  <a href="https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/links/resume.svg" align="right" height="56" alt="Resume" />
+  </a>
+</div>
+
+<!-- END HEADER -->
+
+<!-- BEGIN HERO -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/hero.svg" alt="Mallow's Hero Image" />
+</picture>
+
+<!-- END HERO -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN ABOUT-ME -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/titles/about-me.svg" alt="About Me" />
+</picture>
+
+<!-- END ABOUT-ME -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN EXPERIENCE -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/titles/experience.svg" alt="Experience" />
+</picture>
+
+<!-- END EXPERIENCE -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN PROJECTS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/titles/projects.svg" alt="Projects" />
+</picture>
+
+<!-- END PROJECTS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN STACKS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/titles/stacks.svg" alt="Stacks" />
+</picture>
+
+<!-- END STACKS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN FRIENDS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/titles/friends.svg" alt="Friends" />
+</picture>
+
+<br>
+
+<div>
+  <a href="https://www.github.com/natan-fievet" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/friends/nathan-fievet.svg" width="33%" alt="Nathan Fievet" />
+  </a>
+  <a href="https://www.github.com/Hugo-Cathelain" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/friends/hugo-cathelain.svg" width="33%" alt="Hugo Cathelain" />
+  </a>
+  <a href="https://www.github.com/Omegalpha28" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/friends/ossan-msoili.svg" width="33%" alt="Ossan Msoili" />
+  </a>
+</div>
+
+<br>
+
+<div>
+  <a href="https://www.github.com/bombabobo" target="_blank">
+    <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/friends/raphael-ostier.svg" width="33%" alt="Raphaël Ostier" />
+  </a>
+</div>
+
+<!-- END FRIENDS -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/divider.svg" width="100%" alt="---" />
+</picture>
+
+<!-- BEGIN FOOTER -->
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/thanks.svg" align="left" alt="Thanks for stopping by !" />
+</picture>
+
+<picture>
+  <img src="https://raw.githubusercontent.com/mallory-scotton/mallory-scotton/output/generated/last-updated.svg" align="right" alt="Last Update" />
+</picture>
+
+<!-- END FOOTER -->

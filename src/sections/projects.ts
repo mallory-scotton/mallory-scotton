@@ -7,5 +7,9 @@ import { image } from './utils';
  * @description This function generates the Projects section of the profile.
  */
 export function getProjectsSection(config: ProfileConfig): string {
-  return ``.trim();
+  // Generate the title image
+  const title = image({ src: 'generated/titles/projects.svg', alt: 'Projects' }, config.profile.repository);
+
+  // Generate the content
+  return [title].join('\n\n').trim();
 }

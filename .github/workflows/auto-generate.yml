@@ -43,13 +43,12 @@ jobs:
 
           # Remove old contents
           git rm -rf . || true
-          git rm -rf node_modules/ || true
 
           # Copy back the fresh generated files
-          cp -r ../output-temp/generated ./generated
-          cp ../output-temp/README.md ./README.md || true
+          cp -r ../output-temp/* .
 
           # Commit & push
-          git add .
+          git add generated
+          git add README.md
           git commit -m "Update generated SVGs and README [skip ci]" || echo "No changes to commit"
           git push origin output --force

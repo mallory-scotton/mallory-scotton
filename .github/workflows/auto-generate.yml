@@ -43,9 +43,11 @@ jobs:
 
           # Remove old contents
           git rm -rf . || true
+          git rm -rf node_modules/ || true
 
           # Copy back the fresh generated files
-          cp -r ../output-temp/* .
+          cp -r ../output-temp/generated ./generated
+          cp ../output-temp/README.md ./README.md || true
 
           # Commit & push
           git add .

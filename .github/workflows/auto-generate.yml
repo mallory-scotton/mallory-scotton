@@ -33,9 +33,9 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Make a temporary directory
-          mkdir ../temp
-          cp -r generated/* ../temp
-          cp README.md ../temp || true
+          mkdir ../output-temp
+          cp -r generated ../output-temp/
+          cp README.md ../output-temp/ || true
 
           # Change to the output branch
           git fetch origin
@@ -45,7 +45,7 @@ jobs:
           git rm -rf . || true
 
           # Copy back the fresh generated files
-          cp -r ../temp/* .
+          cp -r ../output-temp/* .
 
           # Commit & push
           git add .

@@ -1,0 +1,54 @@
+<!--
+By
+ ███▄ ▄███▓ ▄▄▄       ██▓     ██▓     ▒█████   █     █░
+▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓██▒    ▒██▒  ██▒▓█░ █ ░█░
+▓██    ▓██░▒██  ▀█▄  ▒██░    ▒██░    ▒██░  ██▒▒█░ █ ░█ 
+▒██    ▒██ ░██▄▄▄▄██ ▒██░    ▒██░    ▒██   ██░░█░ █ ░█ 
+▒██▒   ░██▒ ▓█   ▓██▒░██████▒░██████▒░ ████▓▒░░░██▒██▓ 
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▓░▒ ▒  
+░  ░      ░  ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░  
+░      ░     ░   ▒     ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░  
+       ░         ░  ░    ░  ░    ░  ░    ░ ░      ░    
+Generated on 8/28/2025
+
+The MIT License (MIT)
+
+Copyright (c) Mallory SCOTTON
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="97.5765625" height="50" viewBox="0 0 97.5765625 50" fill="none">
+  <defs>
+    <filter x="0" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter-lvu1zjyknom">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix type="matrix" in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="10"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2021_68"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2021_68" result="shape"/>
+    </filter>
+  </defs>
+  <g filter="url(#filter-lvu1zjyknom)" id="msvg-shjr877ifc">
+    <path d="M20 25C20 22.2386 22.2386 20 25 20C27.7614 20 30 22.2386 30 25C30 27.7614 27.7614 30 25 30C22.2386 30 20 27.7614 20 25Z" fill="#F2F2F2" id="msvg-g76ma6z7u5i"/>
+  </g>
+  <path d="M3.62 0.13L3.62 0.13Q2.70 0.13 2.02-0.17Q1.33-0.46 0.95-1.02Q0.57-1.58 0.54-2.35L0.54-2.35L1.78-2.35Q1.82-1.89 2.06-1.57Q2.31-1.26 2.71-1.10Q3.12-0.95 3.61-0.95L3.61-0.95Q4.14-0.95 4.55-1.11Q4.95-1.27 5.19-1.57Q5.42-1.86 5.42-2.26L5.42-2.26Q5.42-2.61 5.23-2.84Q5.03-3.06 4.68-3.22Q4.34-3.37 3.87-3.49L3.87-3.49L2.93-3.74Q1.88-4.02 1.32-4.54Q0.75-5.07 0.75-5.91L0.75-5.91Q0.75-6.62 1.13-7.15Q1.50-7.68 2.16-7.97Q2.81-8.26 3.64-8.26L3.64-8.26Q4.49-8.26 5.13-7.97Q5.77-7.67 6.13-7.14Q6.49-6.62 6.51-5.94L6.51-5.94L5.30-5.94Q5.25-6.53 4.79-6.86Q4.33-7.19 3.62-7.19L3.62-7.19Q3.13-7.19 2.76-7.03Q2.40-6.87 2.19-6.60Q1.99-6.33 1.99-5.98L1.99-5.98Q1.99-5.61 2.21-5.38Q2.43-5.14 2.77-5.00Q3.11-4.86 3.48-4.76L3.48-4.76L4.29-4.55Q4.72-4.44 5.15-4.27Q5.57-4.09 5.91-3.82Q6.25-3.55 6.44-3.17Q6.64-2.79 6.64-2.26L6.64-2.26Q6.64-1.56 6.29-1.02Q5.93-0.48 5.25-0.17Q4.57 0.13 3.62 0.13ZM11.86-7.08L9.31-7.08L9.31-8.15L15.65-8.15L15.65-7.08L13.10-7.08L13.10 0L11.86 0L11.86-7.08ZM19.35 0L18.01 0L20.93-8.15L22.44-8.15L25.39 0L24.05 0L22.46-4.54Q22.28-5.11 22.05-5.84Q21.83-6.58 21.54-7.62L21.54-7.62L21.81-7.62Q21.52-6.57 21.30-5.83Q21.08-5.09 20.90-4.54L20.90-4.54L19.35 0ZM23.80-2.14L19.60-2.14L19.60-3.18L23.80-3.18L23.80-2.14ZM31.59 0.11L31.59 0.11Q30.51 0.11 29.68-0.39Q28.84-0.90 28.36-1.84Q27.89-2.78 27.89-4.07L27.89-4.07Q27.89-5.36 28.37-6.31Q28.85-7.25 29.68-7.75Q30.52-8.26 31.59-8.26L31.59-8.26Q32.24-8.26 32.80-8.07Q33.37-7.89 33.82-7.53Q34.27-7.17 34.57-6.66Q34.86-6.14 34.96-5.49L34.96-5.49L33.71-5.49Q33.63-5.89 33.44-6.19Q33.25-6.50 32.97-6.71Q32.68-6.92 32.34-7.02Q31.99-7.13 31.60-7.13L31.60-7.13Q30.87-7.13 30.31-6.77Q29.75-6.41 29.44-5.73Q29.12-5.04 29.12-4.07L29.12-4.07Q29.12-3.10 29.44-2.41Q29.76-1.73 30.32-1.37Q30.88-1.02 31.60-1.02L31.60-1.02Q31.98-1.02 32.33-1.12Q32.68-1.23 32.96-1.44Q33.24-1.65 33.44-1.95Q33.63-2.26 33.71-2.65L33.71-2.65L34.96-2.65Q34.87-2.04 34.58-1.53Q34.29-1.03 33.85-0.66Q33.41-0.28 32.83-0.08Q32.26 0.11 31.59 0.11ZM40.95-4.35L38.93-2.15L38.93-3.47Q39.20-3.86 39.47-4.21Q39.73-4.56 40.02-4.91Q40.31-5.25 40.63-5.61L40.63-5.61L42.92-8.15L44.50-8.15L41.04-4.34L40.95-4.35ZM39.29 0L38.04 0L38.04-8.15L39.29-8.15L39.29-5.54L39.28-3.68L39.29-3.07L39.29 0ZM44.53 0L43.07 0L40.29-4.00L41.06-4.95L44.53 0ZM50.09 0.13L50.09 0.13Q49.17 0.13 48.49-0.17Q47.81-0.46 47.43-1.02Q47.05-1.58 47.01-2.35L47.01-2.35L48.26-2.35Q48.29-1.89 48.54-1.57Q48.78-1.26 49.19-1.10Q49.59-0.95 50.09-0.95L50.09-0.95Q50.61-0.95 51.02-1.11Q51.43-1.27 51.66-1.57Q51.89-1.86 51.89-2.26L51.89-2.26Q51.89-2.61 51.70-2.84Q51.50-3.06 51.16-3.22Q50.81-3.37 50.35-3.49L50.35-3.49L49.40-3.74Q48.35-4.02 47.79-4.54Q47.23-5.07 47.23-5.91L47.23-5.91Q47.23-6.62 47.60-7.15Q47.98-7.68 48.63-7.97Q49.28-8.26 50.12-8.26L50.12-8.26Q50.96-8.26 51.60-7.97Q52.24-7.67 52.60-7.14Q52.96-6.62 52.99-5.94L52.99-5.94L51.78-5.94Q51.72-6.53 51.26-6.86Q50.80-7.19 50.09-7.19L50.09-7.19Q49.60-7.19 49.24-7.03Q48.87-6.87 48.67-6.60Q48.46-6.33 48.46-5.98L48.46-5.98Q48.46-5.61 48.68-5.38Q48.90-5.14 49.24-5.00Q49.59-4.86 49.95-4.76L49.95-4.76L50.76-4.55Q51.20-4.44 51.62-4.27Q52.04-4.09 52.38-3.82Q52.72-3.55 52.92-3.17Q53.12-2.79 53.12-2.26L53.12-2.26Q53.12-1.56 52.76-1.02Q52.40-0.48 51.72-0.17Q51.05 0.13 50.09 0.13Z" fill="#F2F2F2" opacity="0.4" id="msvg-8wclyxro1sc" style="transform: translate(42px, 29.599999999999998px)"/>
+</svg>

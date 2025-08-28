@@ -51,4 +51,13 @@ export function generateSVGs(config: ProfileConfig) {
   config.friends.forEach((friend) => {
     Generators.friend2svg(friend).save(`generated/friends/${kebabcase(friend.name)}.svg`);
   });
+
+  // Generate SVG for experiences and companies
+  config.experiences.forEach((experience, index) => {
+    // Generate SVG for experience
+    const [exp, company] = Generators.experience2svg(experience);
+    // Save the experience and company SVGs
+    exp.save(`generated/experiences/${index}-${kebabcase(experience.company)}.svg`);
+    company.save(`generated/companies/${index}-${kebabcase(experience.company)}.svg`);
+  });
 }

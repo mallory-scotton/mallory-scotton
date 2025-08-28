@@ -250,6 +250,26 @@ export class SVG {
   }
 
   /**
+   * @brief Measure the width of a text string using the specified font options.
+   * @param text - The text to measure.
+   * @param fontSize - The font size in pixels.
+   * @param letterSpacing - The letter spacing in pixels.
+   * @param fontWeight - The font weight (defaults to 'light' for Inter).
+   * @returns The width of the text in pixels.
+   */
+  public static measureTextWidth(
+    text: string,
+    fontSize: number,
+    letterSpacing: number,
+    fontWeight: 'light' | 'regular' | 'medium' = 'light'
+  ): number {
+    const font = Inter[fontWeight];
+    const path = font.getPath(text, 0, 0, fontSize, { letterSpacing: letterSpacing / 10 });
+    const bbox = path.getBoundingBox();
+    return bbox.x2 - bbox.x1;
+  }
+
+  /**
    * @brief Add an image to the SVG
    * @description This method adds an image element to the current SVG object.
    * @param src - The source URL of the image.
@@ -430,6 +450,62 @@ export class SVG {
       },
       element
     ];
+  }
+
+  /**
+   * @brief Add multi-line text with auto-wrapping and manual line breaks.
+   * @param text - The full text to render.
+   * @param options - Text options, including maxWidth for wrapping.
+   * @returns The bounding box of the entire text block and the SVG elements.
+   */
+  public addMultiLineText(text: string, options: TextOptions & { maxWidth: number }): [Boundary, SVGObject[]] {
+    // Step 1: Preprocess text for manual breaks (insert \n after specified words)
+    const { x = 0, y = 0, lineHeight, fontSize = 16, fontWeight = 'light', letterSpacing = 0, maxWidth } = options;
+
+    // Ensure one space after each \n if not already present
+    const processedText = text.replace(/\n(?!\s)/g, '\n ');
+
+    // Step 2: Split into paragraphs by \n
+    const paragraphs = processedText.split('\n').filter((p) => p.trim());
+
+    // Step 3: Wrap each paragraph into lines that fit maxWidth
+    const lines: string[] = [];
+    paragraphs.forEach((paragraph) => {
+      const words = paragraph.split(' ');
+      let currentLine = '';
+      words.forEach((word, i) => {
+        if (i === 0 && word === '') {
+          currentLine = ' ';
+          return;
+        }
+        const testLine = currentLine + (currentLine ? ' ' : '') + word;
+        const width = SVG.measureTextWidth(testLine, fontSize, letterSpacing, fontWeight);
+        if (width <= maxWidth) {
+          currentLine = testLine;
+        } else {
+          if (currentLine) lines.push(currentLine);
+          currentLine = word;
+        }
+      });
+      if (currentLine) lines.push(currentLine);
+    });
+
+    // Step 4: Render each line using addText
+    const elements: SVGObject[] = [];
+    let currentY = y;
+    let maxWidthUsed = 0;
+    let totalHeight = 0;
+
+    lines.forEach((line) => {
+      const [bound, element] = this.addText(line, { ...options, x, y: currentY });
+      elements.push(element);
+      maxWidthUsed = Math.max(maxWidthUsed, bound.width);
+      totalHeight += lineHeight || bound.height;
+      currentY += lineHeight || bound.height;
+    });
+
+    // Step 5: Return overall boundary and elements
+    return [{ width: maxWidthUsed, height: totalHeight, x, y }, elements];
   }
 
   /**

@@ -10,4 +10,6 @@ export interface ImageOptions {
   url?: string;
   align?: 'left' | 'center' | 'right';
   indent?: number;
+  description?: string;
+  multiLine?: boolean;
 }

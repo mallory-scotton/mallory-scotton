@@ -11,26 +11,35 @@ export function getHeaderSection(config: ProfileConfig): string {
   // Generate the links
   const links = config.links
     .map((link) =>
-      image({
-        src: `generated/links/${kebabcase(link.name)}.svg`,
-        align: 'right',
-        alt: link.name,
-        url: link.url,
-        indent: 1,
-        height: '56'
-      }, config.profile.repository)
+      image(
+        {
+          src: `generated/links/${kebabcase(link.name)}.svg`,
+          align: 'right',
+          alt: link.name,
+          url: link.url,
+          indent: 1,
+          height: '56',
+          description: `${capitalize(link.name)}`
+        },
+        config.profile.repository
+      )
     )
     .join('\n');
 
   // Generate the profile image
-  const profile = image({
-    src: 'generated/profile.svg',
-    alt: `${capitalize(config.profile.name)}`,
-    url: config.profile.url,
-    align: 'left',
-    height: '56',
-    indent: 1
-  }, config.profile.repository);
+  const profile = image(
+    {
+      src: 'generated/profile.svg',
+      alt: `${capitalize(config.profile.name)}`,
+      url: config.profile.url,
+      align: 'left',
+      height: '56',
+      indent: 1,
+      description: `${capitalize(config.profile.name)}\n${capitalize(config.profile.title)}`,
+      multiLine: true
+    },
+    config.profile.repository
+  );
 
   return `<div align="center">\n${profile}\n${links}\n</div>`.trim();
 }

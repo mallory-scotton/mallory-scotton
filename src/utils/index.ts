@@ -4,3 +4,4 @@ export * from './fonts';
 export * from './svg';
 export * from './watermark';
 export * from './images';
+export * from './date';

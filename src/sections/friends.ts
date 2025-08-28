@@ -1,6 +1,6 @@
 /** Dependencies */
 import { Friend, ProfileConfig } from '../types';
-import { capitalize, kebabcase } from '../utils';
+import { capitalize, kebabcase, stripDomain } from '../utils';
 import { image } from './utils';
 
 /**
@@ -26,13 +26,18 @@ export function getFriendsSection(config: ProfileConfig): string {
     // Generate images for each friend in the trio
     const images = trio
       .map((friend) =>
-        image({
-          src: `generated/friends/${kebabcase(friend.name)}.svg`,
-          width: '33%',
-          url: friend.website,
-          indent: 1,
-          alt: capitalize(friend.name)
-        }, config.profile.repository)
+        image(
+          {
+            src: `generated/friends/${kebabcase(friend.name)}.svg`,
+            width: '33%',
+            url: friend.website,
+            indent: 1,
+            alt: capitalize(friend.name),
+            description: `${capitalize(friend.name)}\n${capitalize(friend.title)} — ${capitalize(friend.company)}\n${stripDomain(friend.website)} ->`,
+            multiLine: true
+          },
+          config.profile.repository
+        )
       )
       .join('\n');
     // Wrap images in a div
@@ -40,10 +45,13 @@ export function getFriendsSection(config: ProfileConfig): string {
   });
 
   // Generate the title image
-  const title = image({
-    src: 'generated/titles/friends.svg',
-    alt: 'Friends'
-  }, config.profile.repository);
+  const title = image(
+    {
+      src: 'generated/titles/friends.svg',
+      alt: 'Friends'
+    },
+    config.profile.repository
+  );
 
   // Return the friends section
   return [title, ...friendsSection].join('\n\n<br>\n\n').trim();

@@ -3,6 +3,7 @@ import * as Generators from './generators';
 import fs from 'fs';
 import { kebabcase } from './utils';
 import { ProfileConfig } from './types';
+import { LEGIBILITY_TEXT, THANKS_TEXT } from './constants';
 
 /**
  * @brief The section titles to generates
@@ -29,13 +30,13 @@ export function generateSVGs(config: ProfileConfig) {
   Generators.divider2svg().save(`generated/divider.svg`);
 
   // Generate SVG for legibility
-  Generators.legibility2svg('For better legibility, please turn on dark mode.').save(`generated/legibility.svg`);
+  Generators.legibility2svg(LEGIBILITY_TEXT).save(`generated/legibility.svg`);
 
   // Generate SVG for profile
   Generators.profile2svg(config).save(`generated/profile.svg`);
 
   // Generate SVG for thanks message
-  Generators.thanks2svg('Thanks for stopping by!', config.profile.signature).save(`generated/thanks.svg`);
+  Generators.thanks2svg(THANKS_TEXT, config.profile.signature).save(`generated/thanks.svg`);
 
   // Generate SVG for titles
   SECTION_TITLES.forEach((title) => {

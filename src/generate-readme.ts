@@ -4,6 +4,7 @@ import { ProfileConfig } from './types';
 import { capitalize, WATERMARK } from './utils';
 import * as sections from './sections';
 import { encapsulateSection, image } from './sections/utils';
+import { LEGIBILITY_TEXT } from './constants';
 
 /**
  * @brief Generates a README file for the project
@@ -17,7 +18,7 @@ export function generateReadme(config: ProfileConfig) {
   // Define the tokens for replacement
   const tokens = {
     'WATERMARK': WATERMARK,
-    'LEGIBILITY': image({ src: 'generated/legibility.svg' }, config.profile.repository),
+    'LEGIBILITY': image({ src: 'generated/legibility.svg', description: LEGIBILITY_TEXT }, config.profile.repository),
     'HEADER': sections.getHeaderSection(config),
     'HERO': image(
       { src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` },

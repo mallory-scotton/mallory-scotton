@@ -1,3 +1,6 @@
+/** Dependencies */
+import fs from 'fs';
+
 /**
  * @brief Watermark for the generated SVG files
  * @description This watermark is added to the generated SVG files to indicate their origin.
@@ -14,4 +17,6 @@ By
 ░      ░     ░   ▒     ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░  
        ░         ░  ░    ░  ░    ░  ░    ░ ░      ░    
 Generated on ${new Date().toLocaleDateString()}
+
+${fs.readFileSync('LICENSE.md', 'utf-8')}
 -->`;

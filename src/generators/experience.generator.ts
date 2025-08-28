@@ -1,6 +1,6 @@
 /** Dependencies */
 import { Experience } from '../types';
-import { capitalize, SVG, uppercase } from '../utils';
+import { capitalize, SVG, uppercase, formatExperienceDate } from '../utils';
 
 /**
  * @brief Generate an SVG representation of a company.
@@ -26,29 +26,6 @@ function company2svg(company: string, height: number): SVG {
 }
 
 /**
- * @brief Format a work experience duration.
- * @description This function takes a start and end date and returns a formatted string representing the experience duration.
- * @param start - The start date of the experience.
- * @param end - The end date of the experience (or null for present).
- * @returns A formatted string representing the experience duration.
- */
-function formatExperience(start: Date, end: Date | null): string {
-  // Format a date as MM/'YY
-  const formatDate = (date: Date): string => {
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear().toString().slice(-2);
-    return `${month}/'${year}`;
-  };
-
-  // Format the experience duration
-  const startStr = formatDate(start);
-  const endStr = end ? formatDate(end) : 'Present';
-
-  // Combine start and end dates
-  return `${startStr} – ${endStr}`;
-}
-
-/**
  * @brief Generate an SVG representation of a work experience.
  * @description This function takes a work experience description as input and returns an SVG representation of the experience.
  * @param experience - The work experience to represent.
@@ -71,7 +48,7 @@ export function experience2svg(experience: Experience): [SVG, SVG] {
   });
 
   // Add date text
-  svg.addText(formatExperience(experience.start, experience.end), {
+  svg.addText(formatExperienceDate(experience.start, experience.end), {
     fontWeight: 'regular',
     fontSize: 12.88,
     lineHeight: 18.2,

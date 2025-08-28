@@ -47,7 +47,7 @@ export function image(options: ImageOptions, repository: string): string {
   }
 
   // Get the source URL for the image
-  const source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`
+  const source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`;
 
   // Build the attributes string
   const attributes = [alignAttribute, heightAttribute, widthAttribute, altAttribute].filter((attr) => attr).join(' ');
@@ -55,8 +55,41 @@ export function image(options: ImageOptions, repository: string): string {
   // Build the indentation string
   const indent = ''.padStart((options.indent ?? 0) * 2, ' ');
 
+  // Build the description if provided
+  let description = '';
+  if (options.description) {
+    description =
+      comment(options.description, { multiLine: options.multiLine ?? false, indent: (options.indent ?? 0) + 1 }) + '\n';
+  }
+
   // Build the image tag
-  return `${indent}<${containerType}${containerAttributes}>\n${indent}  <img src="${source}" ${attributes} />\n${indent}</${containerType}>`;
+  return `${indent}<${containerType}${containerAttributes}>\n${description}${indent}  <img src="${source}" ${attributes} />\n${indent}</${containerType}>`;
+}
+
+/**
+ * @brief Generate an HTML comment
+ * @description This function generates an HTML comment with the specified text.
+ * @param text - The text to include in the comment.
+ * @param multiLine - Whether the comment should be multi-line.
+ * @returns The HTML comment as a string.
+ */
+export function comment(text: string, options: { multiLine?: boolean; indent?: number } = {}): string {
+  // Destructure options with defaults
+  const { multiLine = false, indent = 0 } = options;
+
+  // Build the indentation string
+  const indentString = ''.padStart(indent * 2, ' ');
+
+  // Build the comment string
+  if (multiLine) {
+    return `${indentString}<!--\n${text
+      .split('\n')
+      .map((line) => `${indentString}  ${line}`)
+      .join('\n')}\n${indentString}-->`;
+  }
+
+  // Single-line comment
+  return `${indentString}<!-- ${text} -->`;
 }
 
 /**
@@ -73,8 +106,8 @@ export function encapsulateSection(content: string, name: string): string {
   }
 
   // General case
-  const begin = `<!-- BEGIN ${uppercase(name)} -->`;
-  const end = `<!-- END ${uppercase(name)} -->`;
+  const begin = comment(`BEGIN ${uppercase(name)}`);
+  const end = comment(`END ${uppercase(name)}`);
 
   // Wrap the content with HTML comments
   return `${begin}\n\n${content}\n\n${end}`.trim();

@@ -1,6 +1,6 @@
 /** Dependencies */
 import { ProfileConfig } from '../types';
-import { capitalize, kebabcase } from '../utils';
+import { capitalize, kebabcase, uppercase, formatExperienceDate } from '../utils';
 import { image } from './utils';
 
 /**
@@ -15,6 +15,10 @@ export function getExperienceSection(config: ProfileConfig): string {
     // Generate a unique ID for the experience
     const id = `${index}-${kebabcase(experience.company)}`;
 
+    // Get the company name and experience information
+    const companyName = experience.company.length > 3 ? capitalize(experience.company) : uppercase(experience.company);
+    const experienceInfo = `${capitalize(experience.position)}, ${companyName}\n${formatExperienceDate(experience.start, experience.end)}\n${experience.description}`;
+
     // Generate the company image
     const company = image(
       {
@@ -22,7 +26,8 @@ export function getExperienceSection(config: ProfileConfig): string {
         url: experience.website,
         align: 'left',
         alt: experience.company,
-        indent: 1
+        indent: 1,
+        description: companyName
       },
       config.profile.repository
     );
@@ -33,7 +38,9 @@ export function getExperienceSection(config: ProfileConfig): string {
         src: `generated/experiences/${id}.svg`,
         alt: capitalize(experience.position),
         indent: 1,
-        align: 'right'
+        align: 'right',
+        description: experienceInfo,
+        multiLine: true
       },
       config.profile.repository
     );

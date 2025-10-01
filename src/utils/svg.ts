@@ -213,6 +213,46 @@ export class SVG {
   }
 
   /**
+   * @brief Add a clipPath to the SVG
+   * @description This method adds a clipPath to the current SVG object.
+   * @param clipPath - The clipPath SVG element to add.
+   * @returns The added clipPath SVG element.
+   */
+  public addClipPath(child: SVGObject): SVGObject {
+    // Generate a unique ID for the clipPath
+    const id = this._generateID('clipPath-');
+
+    // Initialize clipPaths array if it doesn't exist
+    if (!this._self.children) {
+      this._self.children = [];
+    }
+
+    // Get the defs element
+    let defs: SVGObject | undefined = this._self.children?.find((c) => c.type === 'defs');
+    if (!defs) {
+      defs = { type: 'defs', children: [] } as SVGObject;
+      this._self.children?.push(defs);
+    }
+
+    // Ensure children exists
+    if (!defs.children) {
+      defs.children = [];
+    }
+
+    const childId = child.id || this._generateID('msvg-');
+    child.id = childId;
+
+    // Set the clipPath ID
+    const clipPath: SVGObject = { type: 'clipPath', id, children: [child] };
+
+    // Add the clipPath element to the defs
+    defs.children?.push(clipPath);
+
+    // Return the added clipPath element
+    return clipPath;
+  }
+
+  /**
    * @brief Add a pattern to the SVG
    * @description This method adds a pattern to the current SVG object.
    * @param pattern - The pattern SVG element to add.

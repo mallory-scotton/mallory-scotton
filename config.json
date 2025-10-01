@@ -110,5 +110,10 @@
       "name": "Resume",
       "url": "https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link"
     }
-  ]
+  ],
+  "hero": {
+    "title": "Student at EPITECH. Based in Annecy.",
+    "subtitle": "Formerly at SBS and Planifique.",
+    "background": "file://images/hero-background.png"
+  }
 }

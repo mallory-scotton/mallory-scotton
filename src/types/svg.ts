@@ -25,6 +25,7 @@ export type SVGType =
   | 'feBlend'
   | 'image'
   | 'pattern'
+  | 'clipPath'
   | 'use';
 
 /**
@@ -43,11 +44,12 @@ export type SVGFill =
  * @description Represents the base properties of an SVG element.
  */
 export type SVGBase = {
-  style?: Partial<CSSStyleDeclaration>;
-  children?: SVGObject[];
-  fill?: SVGFill;
-  opacity?: number;
-  id?: string;
+  'style'?: Partial<CSSStyleDeclaration>;
+  'children'?: SVGObject[];
+  'fill'?: SVGFill;
+  'fill-opacity'?: number;
+  'opacity'?: number;
+  'id'?: string;
 };
 
 /**
@@ -76,8 +78,9 @@ export type SVGObject =
       transform?: string;
     })
   | (SVGBase & {
-      type: 'g';
-      filter?: string;
+      'type': 'g';
+      'filter'?: string;
+      'clip-path'?: string;
     })
   | (SVGBase & {
       type: 'circle';
@@ -116,6 +119,10 @@ export type SVGObject =
       'height': number;
       'filterUnits'?: string;
       'color-interpolation-filters'?: string;
+    })
+  | (SVGBase & {
+      type: 'clipPath';
+      id: string;
     })
   | (SVGBase & {
       type:

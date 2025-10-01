@@ -175,6 +175,33 @@ export interface Experience {
 }
 
 /**
+ * @brief Represents the hero section of the profile.
+ * @description This interface defines the structure for the hero section details.
+ */
+export interface Hero {
+  /**
+   * @brief Represents the title of the hero section.
+   * @description This is the main title displayed in the hero section.
+   * @example 'Student at EPITECH. Based in Annecy.'
+   */
+  title: string;
+
+  /**
+   * @brief Represents the subtitle of the hero section.
+   * @description This is the secondary text displayed in the hero section.
+   * @example 'Formerly at SBS and Planifique.'
+   */
+  subtitle: string;
+
+  /**
+   * @brief Represents the image of the hero section.
+   * @description This is the file path to the image displayed in the hero section.
+   * @example '/path/to/image.jpg'
+   */
+  background: string;
+}
+
+/**
  * @brief Represents the profile configuration of the user.
  * @description This interface defines the structure for the user's profile configuration.
  */
@@ -202,4 +229,10 @@ export interface ProfileConfig {
    * @description This is an array of the user's links (e.g., social media, portfolio).
    */
   links: Link[];
+
+  /**
+   * @brief Represents the hero section of the profile.
+   * @description This is the hero section details of the user's profile.
+   */
+  hero: Hero;
 }

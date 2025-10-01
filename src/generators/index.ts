@@ -8,3 +8,4 @@ export * from './legibility.generator';
 export * from './profile.generator';
 export * from './thanks.generator';
 export * from './experience.generator';
+export * from './hero.generator';

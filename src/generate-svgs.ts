@@ -43,6 +43,9 @@ export function generateSVGs(config: ProfileConfig) {
     Generators.title2svg(title).save(`generated/titles/${kebabcase(title)}.svg`);
   });
 
+  // Generate SVG for hero
+  Generators.hero2svg(config).save(`generated/hero.svg`);
+
   // Generate SVG for links
   config.links.forEach((link) => {
     Generators.link2svg(link.name).save(`generated/links/${kebabcase(link.name)}.svg`);

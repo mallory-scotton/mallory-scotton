@@ -104,7 +104,22 @@
         },
         "required": ["name", "url"]
       }
+    },
+    "hero": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        }
+      },
+      "required": ["title", "subtitle", "background"]
     }
   },
-  "required": ["friends", "experiences", "profile", "links"]
+  "required": ["friends", "experiences", "profile", "links", "hero"]
 }

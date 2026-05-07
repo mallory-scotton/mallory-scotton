@@ -12,5 +12,4 @@ export interface ImageOptions {
   indent?: number;
   description?: string;
   multiLine?: boolean;
-  style?: string;
 }

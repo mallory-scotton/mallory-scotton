@@ -37,7 +37,6 @@ export function image(options: ImageOptions, repository: string): string {
   const heightAttribute = options.height ? `height="${options.height}"` : '';
   const widthAttribute = options.width ? `width="${options.width}"` : '';
   const altAttribute = options.alt ? `alt="${options.alt}"` : '';
-  const styleAttribute = options.style ? `style="${options.style}"` : '';
 
   // Get the Username (and the repository)
   const github = parseGitHub(repository);
@@ -51,7 +50,7 @@ export function image(options: ImageOptions, repository: string): string {
   const source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`;
 
   // Build the attributes string
-  const attributes = [alignAttribute, heightAttribute, widthAttribute, altAttribute, styleAttribute].filter((attr) => attr).join(' ');
+  const attributes = [alignAttribute, heightAttribute, widthAttribute, altAttribute].filter((attr) => attr).join(' ');
 
   // Build the indentation string
   const indent = ''.padStart((options.indent ?? 0) * 2, ' ');

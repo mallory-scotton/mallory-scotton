@@ -27,7 +27,6 @@ export function getExperienceSection(config: ProfileConfig): string {
         align: 'left',
         alt: experience.company,
         indent: 1,
-        style: 'width: calc(50% - 20px);',
         description: companyName
       },
       config.profile.repository
@@ -39,7 +38,6 @@ export function getExperienceSection(config: ProfileConfig): string {
         src: `generated/experiences/${id}.svg`,
         alt: capitalize(experience.position),
         indent: 1,
-        style: 'width: calc(50% - 20px);',
         align: 'right',
         description: experienceInfo,
         multiLine: true

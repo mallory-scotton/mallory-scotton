@@ -18,7 +18,8 @@
           "type": "string"
         },
         "signature": {
-          "type": "string"
+          "type": "string",
+          "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
         },
         "repository": {
           "type": "string"
@@ -115,11 +116,31 @@
           "type": "string"
         },
         "background": {
-          "type": "string"
+          "type": "string",
+          "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
         }
       },
       "required": ["title", "subtitle", "background"]
+    },
+    "about": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string",
+            "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
+          }
+        },
+        "required": ["title", "image"]
+      }
     }
   },
-  "required": ["friends", "experiences", "profile", "links", "hero"]
+  "required": ["friends", "experiences", "profile", "links", "hero", "about"]
 }

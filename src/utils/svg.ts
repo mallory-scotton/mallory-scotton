@@ -68,8 +68,9 @@ export class SVG {
       if (style) {
         const styleEntries: string[] = [];
         for (const [key, value] of Object.entries(style)) {
-          if (value) {
-            styleEntries.push(`${key}: ${value}`);
+          if (value !== undefined && value !== null && value !== '') {
+            const kebabKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+            styleEntries.push(`${kebabKey}: ${value}`);
           }
         }
         if (styleEntries.length > 0) {
@@ -170,6 +171,44 @@ export class SVG {
 
     // Add the child element to the children array
     this._self.children?.push(setID(child));
+
+    // Return the added child element
+    return child;
+  }
+
+  /**
+   * @brief Add an element to the defs section of the SVG.
+   * @description This method adds an SVG element to the defs section of the current SVG object.
+   * @param prefix - The prefix to use for the generated ID of the element.
+   * @param child - The SVG element to add to the defs section.
+   * @return The added SVG element with the generated ID.
+   */
+  public addToDefs(prefix: string, child: SVGObject): SVGObject {
+    // Generate a unique ID for the child element
+    const id = this._generateID(prefix + '-');
+
+    // Initialize children array if it doesn't exist
+    if (!this._self.children) {
+      this._self.children = [];
+    }
+
+    // Get the defs element
+    let defs: SVGObject | undefined = this._self.children?.find((c) => c.type === 'defs');
+    if (!defs) {
+      defs = { type: 'defs', children: [] } as SVGObject;
+      this._self.children?.push(defs);
+    }
+
+    // Ensure children exists
+    if (!defs.children) {
+      defs.children = [];
+    }
+
+    // Set child ID
+    child.id = id;
+
+    // Add the child element to the defs
+    defs.children?.push(child);
 
     // Return the added child element
     return child;
@@ -498,15 +537,28 @@ export class SVG {
    * @param options - Text options, including maxWidth for wrapping.
    * @returns The bounding box of the entire text block and the SVG elements.
    */
-  public addMultiLineText(text: string, options: TextOptions & { maxWidth: number }): [Boundary, SVGObject[]] {
+  public addMultiLineText(
+    text: string,
+    options: TextOptions & { maxWidth: number; insertSpace?: boolean; supportEmptyLine?: boolean }
+  ): [Boundary, SVGObject[]] {
     // Step 1: Preprocess text for manual breaks (insert \n after specified words)
-    const { x = 0, y = 0, lineHeight, fontSize = 16, fontWeight = 'light', letterSpacing = 0, maxWidth } = options;
+    const {
+      x = 0,
+      y = 0,
+      lineHeight,
+      fontSize = 16,
+      fontWeight = 'light',
+      letterSpacing = 0,
+      maxWidth,
+      insertSpace = true,
+      supportEmptyLine = false
+    } = options;
 
     // Ensure one space after each \n if not already present
-    const processedText = text.replace(/\n(?!\s)/g, '\n ');
+    const processedText = insertSpace ? text.replace(/\n(?!\s)/g, '\n ') : text;
 
     // Step 2: Split into paragraphs by \n
-    const paragraphs = processedText.split('\n').filter((p) => p.trim());
+    const paragraphs = processedText.split('\n').filter((p) => (supportEmptyLine ? true : p.trim()));
 
     // Step 3: Wrap each paragraph into lines that fit maxWidth
     const lines: string[] = [];

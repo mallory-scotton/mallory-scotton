@@ -64,4 +64,9 @@ export function generateSVGs(config: ProfileConfig) {
     exp.save(`generated/experiences/${index}-${kebabcase(experience.company)}.svg`);
     company.save(`generated/companies/${index}-${kebabcase(experience.company)}.svg`);
   });
+
+  // Generate SVG for about me slides
+  config.about.forEach((slide, index) => {
+    Generators.aboutslide2svg(slide, index).save(`generated/about/${index}-about.svg`);
+  });
 }

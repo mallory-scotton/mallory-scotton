@@ -36,6 +36,19 @@
   ],
   "experiences": [
     {
+      "company": "SonarSource",
+      "position": "Software Engineer Intern",
+      "website": "https://sonarsource.com",
+      "start": "04-2026",
+      "end": "08-2026",
+      "description": "Contributed to the development of SonarQube's C/C++ static analysis engine, enhancing code quality and security for millions of developers worldwide.\nImplemented new features, optimized existing code, and collaborated with a global team to ensure high-quality software delivery.",
+      "location": {
+        "city": "Geneva",
+        "country": "Switzerland",
+        "type": "hybrid"
+      }
+    },
+    {
       "company": "Planifique",
       "position": "Help Desk",
       "website": "https://www.planifique.com",
@@ -108,12 +121,12 @@
     },
     {
       "name": "Resume",
-      "url": "https://drive.google.com/file/d/1XHECHGjzjWDTqDsXx8aklQN7so_Tzj7o/view?usp=drive_link"
+      "url": "https://drive.google.com/file/d/1DVITYer6wDwGOfLk7GEyCLdbRJ04G7qE/view?usp=sharing"
     }
   ],
   "hero": {
-    "title": "Student at EPITECH. Based in Annecy.",
-    "subtitle": "Formerly at SBS and Planifique.",
+    "title": "Founder of Graphical Playground.",
+    "subtitle": "Formerly at Sonar Source, SBS and EPITECH.",
     "background": "file://images/hero-background.png"
   }
 }

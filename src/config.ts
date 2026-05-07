@@ -2,6 +2,7 @@
 import Ajv from 'ajv';
 import { ProfileConfig } from './types';
 import fs from 'fs';
+import process from 'node:process';
 
 /**
  * @brief Parse a date string in "MM-YYYY" format to a Date object.
@@ -62,6 +63,12 @@ export async function loadConfig(): Promise<ProfileConfig> {
     exp.start = parseDateString(exp.start as string);
     exp.end = exp.end ? parseDateString(exp.end as string) : null;
   });
+
+  // Set the useRelativeFilePath flag based on command-line arguments
+  const useRelativeFilePath = process.argv.includes('--relative-filepath');
+  if (useRelativeFilePath) {
+    config.useRelativeFilePath = true;
+  }
 
   // Return the validated configuration
   return config;

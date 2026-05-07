@@ -8,7 +8,7 @@ import { image } from './utils';
  */
 export function getAboutMeSection(config: ProfileConfig): string {
   // Generate the title image
-  const title = image({ src: 'generated/titles/about-me.svg', alt: 'About Me' }, config.profile.repository);
+  const title = image({ src: 'generated/titles/about-me.svg', alt: 'About Me' }, config);
 
   // Generate the content
   return [title].join('\n\n').trim();

@@ -1,5 +1,5 @@
 /** Dependencies */
-import { ImageOptions } from '../types';
+import { ImageOptions, ProfileConfig } from '../types';
 import { uppercase } from '../utils';
 
 /**
@@ -29,7 +29,7 @@ function parseGitHub(input: string): { user: string; repo?: string } | null {
  * @param repository - The URL of the user's code repository.
  * @returns The HTML string for the image element.
  */
-export function image(options: ImageOptions, repository: string): string {
+export function image(options: ImageOptions, config: ProfileConfig): string {
   // Determine the container type and attributes
   const containerType = options.url ? 'a' : 'picture';
   const containerAttributes = options.url ? ` href="${options.url}" target="_blank"` : '';
@@ -38,16 +38,24 @@ export function image(options: ImageOptions, repository: string): string {
   const widthAttribute = options.width ? `width="${options.width}"` : '';
   const altAttribute = options.alt ? `alt="${options.alt}"` : '';
 
-  // Get the Username (and the repository)
-  const github = parseGitHub(repository);
+  // Determine the image source URL based on the configuration
+  let source = '';
 
-  // Validate the GitHub repository information
-  if (!github) {
-    throw new Error(`Invalid GitHub repository URL: ${repository}`);
+  if (config.useRelativeFilePath) {
+    // Use relative file path for the image source
+    source = `./${options.src}`;
+  } else {
+    // Get the Username (and the repository)
+    const github = parseGitHub(config.profile.repository);
+
+    // Validate the GitHub repository information
+    if (!github) {
+      throw new Error(`Invalid GitHub repository URL: ${config.profile.repository}`);
+    }
+
+    // Get the source URL for the image
+    source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`;
   }
-
-  // Get the source URL for the image
-  const source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`;
 
   // Build the attributes string
   const attributes = [alignAttribute, heightAttribute, widthAttribute, altAttribute].filter((attr) => attr).join(' ');

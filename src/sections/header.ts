@@ -21,7 +21,7 @@ export function getHeaderSection(config: ProfileConfig): string {
           height: '56',
           description: `${capitalize(link.name)}`
         },
-        config.profile.repository
+        config
       )
     )
     .join('\n');
@@ -38,7 +38,7 @@ export function getHeaderSection(config: ProfileConfig): string {
       description: `${capitalize(config.profile.name)}\n${capitalize(config.profile.title)}`,
       multiLine: true
     },
-    config.profile.repository
+    config
   );
 
   return `<div align="center">\n${profile}\n${links}\n</div>`.trim();

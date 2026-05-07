@@ -36,7 +36,7 @@ export function getFriendsSection(config: ProfileConfig): string {
             description: `${capitalize(friend.name)}\n${capitalize(friend.title)} — ${capitalize(friend.company)}\n${stripDomain(friend.website)} ->`,
             multiLine: true
           },
-          config.profile.repository
+          config
         )
       )
       .join('\n');
@@ -50,7 +50,7 @@ export function getFriendsSection(config: ProfileConfig): string {
       src: 'generated/titles/friends.svg',
       alt: 'Friends'
     },
-    config.profile.repository
+    config
   );
 
   // Return the friends section

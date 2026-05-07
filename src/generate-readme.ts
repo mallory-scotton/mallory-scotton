@@ -18,19 +18,16 @@ export function generateReadme(config: ProfileConfig) {
   // Define the tokens for replacement
   const tokens = {
     'WATERMARK': WATERMARK,
-    'LEGIBILITY': image({ src: 'generated/legibility.svg', description: LEGIBILITY_TEXT }, config.profile.repository),
+    'LEGIBILITY': image({ src: 'generated/legibility.svg', description: LEGIBILITY_TEXT }, config),
     'HEADER': sections.getHeaderSection(config),
-    'HERO': image(
-      { src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` },
-      config.profile.repository
-    ),
+    'HERO': image({ src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` }, config),
     'ABOUT-ME': sections.getAboutMeSection(config),
     'EXPERIENCE': sections.getExperienceSection(config),
     'PROJECTS': sections.getProjectsSection(config),
     'STACKS': sections.getStacksSection(config),
     'FRIENDS': sections.getFriendsSection(config),
     'FOOTER': sections.getFooterSection(config),
-    'DIVIDER': image({ src: 'generated/divider.svg', alt: '---', width: '100%' }, config.profile.repository)
+    'DIVIDER': image({ src: 'generated/divider.svg', alt: '---', width: '100%' }, config)
   };
 
   // Replace the sections
@@ -47,5 +44,5 @@ export function generateReadme(config: ProfileConfig) {
   }
 
   // Save the README
-  fs.writeFileSync('README.md', content, 'utf-8');
+  fs.writeFileSync(config.useRelativeFilePath ? 'GENERATED.md' : 'README.md', content, 'utf-8');
 }

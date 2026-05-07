@@ -207,6 +207,13 @@ export interface Hero {
  */
 export interface ProfileConfig {
   /**
+   * @brief Represents whether to use relative file paths for the images URL.
+   * @description This indicates whether the image URLs in the README should use relative file paths.
+   * @example true
+   */
+  useRelativeFilePath?: boolean;
+
+  /**
    * @brief Represents the profile information of the user.
    * @description This is the user's profile details.
    */

@@ -2,6 +2,7 @@
 import { loadConfig } from './config';
 import { generateSVGs } from './generate-svgs';
 import { generateReadme } from './generate-readme';
+import process from 'node:process';
 
 /**
  * @brief Main entry point for the application

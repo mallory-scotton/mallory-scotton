@@ -59,8 +59,8 @@ export type SVGBase = {
 export type SVGObject =
   | (SVGBase & {
       'type': 'svg';
-      'width': number;
-      'height': number;
+      'width': number | string;
+      'height': number | string;
       'xmlns': 'http://www.w3.org/2000/svg';
       'xmlns:xlink'?: 'http://www.w3.org/1999/xlink';
       'viewBox': `${number} ${number} ${number} ${number}`;

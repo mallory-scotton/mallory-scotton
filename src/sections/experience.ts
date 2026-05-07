@@ -9,7 +9,7 @@ import { image } from './utils';
  */
 export function getExperienceSection(config: ProfileConfig): string {
   // Generate the title image
-  const title = image({ src: 'generated/titles/experience.svg', alt: 'Experience' }, config.profile.repository);
+  const title = image({ src: 'generated/titles/experience.svg', alt: 'Experience' }, config);
 
   const experiences = config.experiences.map((experience, index) => {
     // Generate a unique ID for the experience
@@ -29,7 +29,7 @@ export function getExperienceSection(config: ProfileConfig): string {
         indent: 1,
         description: companyName
       },
-      config.profile.repository
+      config
     );
 
     // Generate the experience description image
@@ -42,7 +42,7 @@ export function getExperienceSection(config: ProfileConfig): string {
         description: experienceInfo,
         multiLine: true
       },
-      config.profile.repository
+      config
     );
 
     // Return the experience section

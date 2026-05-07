@@ -26,7 +26,8 @@
   "type": "commonjs",
   "main": "stc/index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "generate": "ts-node src/index.ts",
+    "generate:relative": "ts-node src/index.ts --relative-filepath",
     "prettier": "prettier --write ."
   },
   "dependencies": {

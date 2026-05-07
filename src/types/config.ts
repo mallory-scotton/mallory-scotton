@@ -93,6 +93,33 @@ export interface Friend {
 }
 
 /**
+ * @brief Represents the about me slide of the profile.
+ * @description This interface defines the structure for the about me slide details.
+ */
+export interface AboutMeSlide {
+  /**
+   * @brief Represents the title of the about me slide.
+   * @description This is the main title displayed in the about me slide.
+   * @example 'This thing called development ?'
+   */
+  title: string;
+
+  /**
+   * @brief Represents the description of the about me slide.
+   * @description This is the secondary text displayed in the about me slide.
+   * @example 'Since I was a child, I’ve been drawn to illustration, starting off by sketching and experimenting in my free time. Over the years, I turned that passion into freelance work. I was deeply fascinated by the balance creativity and functionality — how design can shape and adapt to both individual expression and broader trends.'
+   */
+  description?: string;
+
+  /**
+   * @brief Represents the image of the about me slide.
+   * @description This is the file path to the image displayed in the about me slide.
+   * @example '/path/to/image.jpg'
+   */
+  image: string;
+}
+
+/**
  * @brief Represents the location of the friend.
  * @description This interface defines the structure for a friend's location details.
  */
@@ -242,4 +269,10 @@ export interface ProfileConfig {
    * @description This is the hero section details of the user's profile.
    */
   hero: Hero;
+
+  /**
+   * @brief Represents the about me slides of the profile.
+   * @description This is an array of the user's about me slide details.
+   */
+  about: AboutMeSlide[];
 }

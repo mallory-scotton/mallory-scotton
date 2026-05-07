@@ -20,12 +20,13 @@ export type SVGType =
   | 'feOffset'
   | 'feGaussianBlur'
   | 'feComposite'
-  | 'feColorMatrix'
   | 'feBlend'
   | 'feBlend'
   | 'image'
   | 'pattern'
   | 'clipPath'
+  | 'linearGradient'
+  | 'radialGradient'
   | 'use';
 
 /**
@@ -50,6 +51,9 @@ export type SVGBase = {
   'fill-opacity'?: number;
   'opacity'?: number;
   'id'?: string;
+  'stroke'?: SVGFill;
+  'stroke-opacity'?: number;
+  'stroke-width'?: number;
 };
 
 /**
@@ -66,8 +70,9 @@ export type SVGObject =
       'viewBox': `${number} ${number} ${number} ${number}`;
     })
   | (SVGBase & {
-      type: 'path';
-      d: string;
+      'type': 'path';
+      'd': string;
+      'shape-rendering'?: 'crispEdges' | 'geometricPrecision';
     })
   | (SVGBase & {
       type: 'rect';
@@ -81,6 +86,7 @@ export type SVGObject =
       'type': 'g';
       'filter'?: string;
       'clip-path'?: string;
+      'transform'?: string;
     })
   | (SVGBase & {
       type: 'circle';
@@ -130,9 +136,12 @@ export type SVGObject =
         | 'feOffset'
         | 'feGaussianBlur'
         | 'feComposite'
-        | 'feColorMatrix'
         | 'feBlend'
         | 'pattern'
+        | 'feColorMatrix'
+        | 'stop'
+        | 'linearGradient'
+        | 'radialGradient'
         | 'image'
         | 'use';
       [key: string]: any;

@@ -36,7 +36,7 @@
   ],
   "experiences": [
     {
-      "company": "SonarSource",
+      "company": "Sonar Source",
       "position": "Software Engineer Intern",
       "website": "https://sonarsource.com",
       "start": "04-2026",
@@ -128,5 +128,36 @@
     "title": "Founder of Graphical Playground.",
     "subtitle": "Formerly at Sonar Source, SBS and EPITECH.",
     "background": "file://images/hero-background.png"
-  }
+  },
+  "about": [
+    {
+      "title": "This is my story — alongside some flicks from my recent trips.",
+      "image": "file://images/about/image-01.png"
+    },
+    {
+      "title": "My background in Illustration.",
+      "description": "Since I was a child, I’ve been drawn to illustration, starting off by sketching and experimenting in my free time. Over The years, I turned that passion into freelance work.\n\nI was deeply fascinated by the balance creativity and functionality — how design can shape and adapt to both individual expression and broader trends.",
+      "image": "file://images/about/image-02.png"
+    },
+    {
+      "title": "But, I wanted more.",
+      "description": "While I enjoyed the creative freedom that drawing offered, I felt limited by focusing solely on illustration and design.\n\nI wanted to expand my creativity, to explore new ways of creating beyond just drawing, and to bring more of my ideas to life across different mediums.",
+      "image": "file://images/about/image-03.png"
+    },
+    {
+      "title": "This thing called Development?",
+      "description": "As a child, I dabbled in creating Minecraft Mods, and it sparked my curiosity for something beyond illustration. Realizing i didn’t want to pursue illustration forever, I shifted into programming at a young age, experimenting with various projects and finding both enjoyment and success along along the way.\n\nLong story short, what began as curiosity evolved into something I truly loved, and the rest was history.",
+      "image": "file://images/about/image-04.png"
+    },
+    {
+      "title": "Making it all happen.",
+      "description": "To my advantage, I was able leverage a lot of the skills and programming principles I had picked up during my experiments to greatly expedite my journey of self-learning programmation.\n\nI loved solving problems by building things, and found satisfaction in writing clean, efficient code while paying meticulous attention to precision and detail.",
+      "image": "file://images/about/image-05.png"
+    },
+    {
+      "title": "In my spare time,",
+      "description": "I'm probably making tweaks to my projects or hanging out on the Forums.\n\nOther than that, you'll find me riding motorcycles and cars, hitting the gym, gaming, and trying to get my hands on the latest tech.",
+      "image": "file://images/about/image-06.png"
+    }
+  ]
 }

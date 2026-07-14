@@ -39,6 +39,19 @@
   ],
   "experiences": [
     {
+      "company": "Graphical Playground",
+      "position": "Founder",
+      "website": "https://www.graphical-playground.com",
+      "start": "12-2025",
+      "end": null,
+      "description": "Leading the technical roadmap for Graphical Playground. I architect modern rendering pipelines, RHI abstractions, and hardware-agnostic systems designed for both performance and pedagogy. By leveraging cloud-based GPU execution, I build environments where developers can master C++, Shaders, and Ray Tracing without local configuration. I oversee the transition from high-level abstractions to low-level hardware interaction.",
+      "location": {
+        "city": "Annecy",
+        "country": "France",
+        "type": "remote"
+      }
+    },
+    {
       "company": "Sonar Source",
       "position": "Software Engineer Intern",
       "website": "https://sonarsource.com",

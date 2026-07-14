@@ -47,7 +47,13 @@ function generateSlide(config: ProfileConfig, index: number): string | null {
  */
 export function getAboutMeSection(config: ProfileConfig): string {
   // Generate the title image
-  const title = image({ src: 'generated/titles/about-me.svg', alt: 'About Me' }, config);
+  const title = image(
+    {
+      src: { light: 'generated/titles/about-me-light.svg', dark: 'generated/titles/about-me-dark.svg' },
+      alt: 'About Me'
+    },
+    config
+  );
 
   // Generate the about me slides
   const slides: string[] = [];

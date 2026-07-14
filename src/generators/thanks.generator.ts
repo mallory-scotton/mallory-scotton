@@ -1,4 +1,5 @@
 /** Dependencies */
+import { PreferredTheme } from '../types';
 import { SVG } from '../utils';
 
 /**
@@ -9,9 +10,16 @@ import { SVG } from '../utils';
  * @returns An SVG representation of the thank you message.
  * @throws Error if the SVG generation fails.
  */
-export function thanks2svg(message: string, signature: string): SVG {
+export function thanks2svg(message: string, signature: string, theme: PreferredTheme): SVG {
   // Create the SVG
   const svg = new SVG(193, 113);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add the message text
   const [bound, _] = svg.addText(message, {
@@ -19,7 +27,7 @@ export function thanks2svg(message: string, signature: string): SVG {
     fontWeight: 'medium',
     lineHeight: 22.5,
     letterSpacing: 0.4,
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.9
   });
 

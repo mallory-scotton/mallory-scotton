@@ -28,7 +28,10 @@ export function getFriendsSection(config: ProfileConfig): string {
       .map((friend) =>
         image(
           {
-            src: `generated/friends/${kebabcase(friend.name)}.svg`,
+            src: {
+              light: `generated/friends/${kebabcase(friend.name)}-light.svg`,
+              dark: `generated/friends/${kebabcase(friend.name)}-dark.svg`
+            },
             width: '33%',
             url: friend.website,
             indent: 1,
@@ -47,7 +50,7 @@ export function getFriendsSection(config: ProfileConfig): string {
   // Generate the title image
   const title = image(
     {
-      src: 'generated/titles/friends.svg',
+      src: { light: 'generated/titles/friends-light.svg', dark: 'generated/titles/friends-dark.svg' },
       alt: 'Friends'
     },
     config

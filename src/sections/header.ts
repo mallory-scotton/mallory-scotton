@@ -13,7 +13,10 @@ export function getHeaderSection(config: ProfileConfig): string {
     .map((link) =>
       image(
         {
-          src: `generated/links/${kebabcase(link.name)}.svg`,
+          src: {
+            light: `generated/links/${kebabcase(link.name)}-light.svg`,
+            dark: `generated/links/${kebabcase(link.name)}-dark.svg`
+          },
           align: 'right',
           alt: link.name,
           url: link.url,
@@ -29,7 +32,7 @@ export function getHeaderSection(config: ProfileConfig): string {
   // Generate the profile image
   const profile = image(
     {
-      src: 'generated/profile.svg',
+      src: { light: 'generated/profile-light.svg', dark: 'generated/profile-dark.svg' },
       alt: `${capitalize(config.profile.name)}`,
       url: config.profile.url,
       align: 'left',

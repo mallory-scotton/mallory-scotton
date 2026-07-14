@@ -1,5 +1,5 @@
 /** Dependencies */
-import { Experience } from '../types';
+import { Experience, PreferredTheme } from '../types';
 import { capitalize, SVG, uppercase, formatExperienceDate } from '../utils';
 
 /**
@@ -8,9 +8,16 @@ import { capitalize, SVG, uppercase, formatExperienceDate } from '../utils';
  * @param company - The name of the company.
  * @returns An SVG representation of the company.
  */
-function company2svg(company: string, height: number): SVG {
+function company2svg(company: string, height: number, theme: PreferredTheme): SVG {
   // Create new SVG instance
   const svg = new SVG(400, height);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add company name text
   svg.addText(company.length > 3 ? capitalize(company) : uppercase(company), {
@@ -18,7 +25,7 @@ function company2svg(company: string, height: number): SVG {
     letterSpacing: -0.08,
     fontSize: 29.74,
     fontWeight: 'medium',
-    color: '#F2F2F2'
+    color: palette.secondary
   });
 
   // Return this svg
@@ -31,9 +38,16 @@ function company2svg(company: string, height: number): SVG {
  * @param experience - The work experience to represent.
  * @returns An SVG representation of the work experience.
  */
-export function experience2svg(experience: Experience): [SVG, SVG] {
+export function experience2svg(experience: Experience, theme: PreferredTheme): [SVG, SVG] {
   // Create new SVG instance
   const svg = new SVG(400, 255);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add position text
   const position = `${capitalize(experience.position)}, ${experience.company.length > 3 ? capitalize(experience.company) : uppercase(experience.company)}`;
@@ -42,7 +56,7 @@ export function experience2svg(experience: Experience): [SVG, SVG] {
     fontWeight: 'medium',
     lineHeight: 24.3,
     letterSpacing: 0.08,
-    color: '#F2F2F2',
+    color: palette.secondary,
     y: 13,
     x: 0
   });
@@ -53,7 +67,7 @@ export function experience2svg(experience: Experience): [SVG, SVG] {
     fontSize: 12.88,
     lineHeight: 18.2,
     letterSpacing: 0,
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.4,
     x: 0,
     y: 44.28
@@ -65,7 +79,7 @@ export function experience2svg(experience: Experience): [SVG, SVG] {
     lineHeight: 17.39,
     fontSize: 12.88,
     letterSpacing: 0.32,
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.6,
     maxWidth: 390,
     y: 81.47,
@@ -76,7 +90,7 @@ export function experience2svg(experience: Experience): [SVG, SVG] {
   const height = bound.height + bound.y + 5;
 
   // Create company svg
-  const company = company2svg(experience.company, height);
+  const company = company2svg(experience.company, height, theme);
 
   // Set new height
   svg.setDimensions(400, height);

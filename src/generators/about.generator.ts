@@ -1,6 +1,6 @@
 /** Dependencies */
 import { SVG } from '../utils';
-import { AboutMeSlide } from '../types';
+import { AboutMeSlide, PreferredTheme } from '../types';
 
 /**
  * @brief Generates an SVG representation of an about section.
@@ -10,9 +10,16 @@ import { AboutMeSlide } from '../types';
  * @param index - The index of the about slide.
  * @returns An SVG representation of the about section.
  */
-export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
+export function aboutslide2svg(slide: AboutMeSlide, index: number, theme: PreferredTheme): SVG {
   // Create SVG
   const svg = new SVG(401, 1000, 65, 0);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add the main image
   const image = svg.addImage(slide.image, 1080, 1927);
@@ -33,7 +40,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
       y: isLeftAligned ? 650 : 45,
       letterSpacing: 0.32,
       opacity: 0.9,
-      color: '#F2F2F2',
+      color: palette.secondary,
       maxWidth: 350,
       insertSpace: false
     });
@@ -51,7 +58,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
         y: (isLeftAligned ? 650 : 45) + titleBound.height + 22,
         letterSpacing: 0.32,
         opacity: 0.6,
-        color: '#F2F2F2',
+        color: palette.secondary,
         maxWidth: 350,
         insertSpace: false,
         supportEmptyLine: true
@@ -76,9 +83,9 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
       gradientUnits: 'userSpaceOnUse',
       children: [
         { 'type': 'stop', 'offset': 0.05, 'stop-opacity': 0 },
-        { 'type': 'stop', 'offset': 0.35, 'stop-opacity': 0.8, 'stop-color': '#F2F2F2' },
-        { 'type': 'stop', 'offset': 0.5, 'stop-color': '#F2F2F2' },
-        { 'type': 'stop', 'offset': 0.65, 'stop-opacity': 0.8, 'stop-color': '#F2F2F2' },
+        { 'type': 'stop', 'offset': 0.35, 'stop-opacity': 0.8, 'stop-color': palette.secondary },
+        { 'type': 'stop', 'offset': 0.5, 'stop-color': palette.secondary },
+        { 'type': 'stop', 'offset': 0.65, 'stop-opacity': 0.8, 'stop-color': palette.secondary },
         { 'type': 'stop', 'offset': 0.95, 'stop-opacity': 0 }
       ]
     });
@@ -109,12 +116,12 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
     const outerClipPath = svg.addClipPath({
       type: 'path',
       d: 'M65 68.4483C65 57.7073 73.7073 49 84.4483 49H445.862C456.603 49 465.31 57.7073 465.31 68.4483V622.724C465.31 633.465 456.603 642.172 445.862 642.172H84.4483C73.7073 642.172 65 633.465 65 622.724V68.4483Z',
-      fill: 'white'
+      fill: palette.primary
     });
     const innerClipPath = svg.addClipPath({
       type: 'path',
       d: 'M71.4824 68.4484C71.4824 61.2878 77.2873 55.4829 84.4479 55.4829H445.862C453.022 55.4829 458.827 61.2878 458.827 68.4484V622.724C458.827 629.885 453.022 635.69 445.862 635.69H84.4479C77.2873 635.69 71.4824 629.885 71.4824 622.724V68.4484Z',
-      fill: 'white'
+      fill: palette.primary
     });
 
     // Paints
@@ -126,7 +133,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
       gradientUnits: 'userSpaceOnUse',
       gradientTransform: 'translate(265.155 345.586) rotate(55.986) scale(357.806 331.818)',
       children: [
-        { 'type': 'stop', 'stop-color': '#F2F2F2', 'stop-opacity': 0.2 },
+        { 'type': 'stop', 'stop-color': palette.secondary, 'stop-opacity': 0.2 },
         { 'type': 'stop', 'offset': 1, 'stop-opacity': 0 }
       ]
     });
@@ -139,7 +146,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
       gradientUnits: 'userSpaceOnUse',
       children: [
         { 'type': 'stop', 'offset': 0.1, 'stop-opacity': 0 },
-        { 'type': 'stop', 'offset': 0.5, 'stop-color': 'white' },
+        { 'type': 'stop', 'offset': 0.5, 'stop-color': palette.primary },
         { 'type': 'stop', 'offset': 0.9, 'stop-opacity': 0 }
       ]
     });
@@ -239,7 +246,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
                     {
                       'type': 'path',
                       'd': 'M71.4824 68.4484C71.4824 61.2878 77.2873 55.4829 84.4479 55.4829H445.862C453.022 55.4829 458.827 61.2878 458.827 68.4484V622.724C458.827 629.885 453.022 635.69 445.862 635.69H84.4479C77.2873 635.69 71.4824 629.885 71.4824 622.724V68.4484Z',
-                      'fill': 'white',
+                      'fill': palette.primary,
                       'fill-opacity': 0.01,
                       'shape-rendering': 'crispEdges'
                     },
@@ -263,7 +270,7 @@ export function aboutslide2svg(slide: AboutMeSlide, index: number): SVG {
                 {
                   'type': 'path',
                   'd': 'M84.4482 55.8882H445.861C452.798 55.8882 458.422 61.5118 458.422 68.4487V622.724C458.422 629.661 452.798 635.285 445.861 635.285H84.4482C77.5114 635.285 71.8877 629.661 71.8877 622.724V68.4487C71.8877 61.5118 77.5114 55.8882 84.4482 55.8882Z',
-                  'stroke': '#F2F2F2',
+                  'stroke': palette.secondary,
                   'stroke-opacity': 0.3,
                   'stroke-width': 0.810345,
                   'shape-rendering': 'crispEdges'

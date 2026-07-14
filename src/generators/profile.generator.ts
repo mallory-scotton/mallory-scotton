@@ -1,5 +1,5 @@
 /** Dependencies */
-import { ProfileConfig } from '../types';
+import { PreferredTheme, ProfileConfig } from '../types';
 import { capitalize, SVG } from '../utils';
 
 /**
@@ -9,16 +9,23 @@ import { capitalize, SVG } from '../utils';
  * @param config - The profile configuration object containing user details.
  * @returns An SVG representation of the user's profile.
  */
-export function profile2svg(config: ProfileConfig): SVG {
+export function profile2svg(config: ProfileConfig, theme: PreferredTheme): SVG {
   // Create SVG
   const svg = new SVG(416, 94);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add name
   const [bound1, _1] = svg.addText(capitalize(config.profile.name), {
     letterSpacing: 0,
     fontSize: 36,
     fontWeight: 'medium',
-    color: '#F2F2F2',
+    color: palette.secondary,
     lineHeight: 40,
     y: 5,
     x: 101
@@ -30,7 +37,7 @@ export function profile2svg(config: ProfileConfig): SVG {
     lineHeight: 24,
     fontSize: 22.2,
     fontWeight: 'regular',
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.5,
     x: 101,
     y: 61
@@ -61,7 +68,7 @@ export function profile2svg(config: ProfileConfig): SVG {
     height: 90,
     transform: 'translate(0 2)',
     fill: `url(#${pattern.id!})`
-  })
+  });
 
   // Get maximum width
   const width = Math.max(bound1.width, bound2.width);

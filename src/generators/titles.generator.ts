@@ -1,6 +1,6 @@
 /** Dependencies */
 import { SVG, uppercase } from '../utils';
-import { SVGObject } from '../types';
+import { PreferredTheme, SVGObject } from '../types';
 
 /**
  * @brief SVG filter for dot effect
@@ -66,9 +66,16 @@ const DOT_FILTER: SVGObject = {
  * @param {string} title - The title of the section
  * @returns {SVG} The generated SVG element
  */
-export function title2svg(title: string): SVG {
+export function title2svg(title: string, theme: PreferredTheme): SVG {
   // Create a new SVG element
   const svg = new SVG(112, 50);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add the dot filter to the SVG
   const filter = svg.addFilter(DOT_FILTER);
@@ -81,7 +88,7 @@ export function title2svg(title: string): SVG {
       {
         type: 'path',
         d: 'M20 25C20 22.2386 22.2386 20 25 20C27.7614 20 30 22.2386 30 25C30 27.7614 27.7614 30 25 30C22.2386 30 20 27.7614 20 25Z',
-        fill: '#F2F2F2'
+        fill: palette.secondary
       }
     ]
   });
@@ -93,7 +100,7 @@ export function title2svg(title: string): SVG {
     lineHeight: 19,
     letterSpacing: 1.5,
     opacity: 0.4,
-    color: '#F2F2F2',
+    color: palette.secondary,
     x: 42,
     y: 16.5
   });

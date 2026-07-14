@@ -8,7 +8,13 @@ import { image } from './utils';
  */
 export function getProjectsSection(config: ProfileConfig): string {
   // Generate the title image
-  const title = image({ src: 'generated/titles/projects.svg', alt: 'Projects' }, config);
+  const title = image(
+    {
+      src: { light: 'generated/titles/projects-light.svg', dark: 'generated/titles/projects-dark.svg' },
+      alt: 'Projects'
+    },
+    config
+  );
 
   // Generate the content
   return [title].join('\n\n').trim();

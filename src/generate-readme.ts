@@ -18,16 +18,38 @@ export function generateReadme(config: ProfileConfig) {
   // Define the tokens for replacement
   const tokens = {
     'WATERMARK': WATERMARK,
-    'LEGIBILITY': image({ src: 'generated/legibility.svg', description: LEGIBILITY_TEXT }, config),
+    'LEGIBILITY': image(
+      {
+        src: { light: 'generated/legibility-light.svg', dark: 'generated/legibility-dark.svg' },
+        description: LEGIBILITY_TEXT
+      },
+      config
+    ),
     'HEADER': sections.getHeaderSection(config),
-    'HERO': image({ src: 'generated/hero.svg', alt: `${capitalize(config.profile.pseudo)}'s Hero Image` }, config),
+    'HERO': image(
+      {
+        src: { light: 'generated/hero-light.svg', dark: 'generated/hero-dark.svg' },
+        alt: `${capitalize(config.profile.pseudo)}'s Hero Image`
+      },
+      config
+    ),
     'ABOUT-ME': sections.getAboutMeSection(config),
     'EXPERIENCE': sections.getExperienceSection(config),
     'PROJECTS': sections.getProjectsSection(config),
     'STACKS': sections.getStacksSection(config),
     'FRIENDS': sections.getFriendsSection(config),
     'FOOTER': sections.getFooterSection(config),
-    'DIVIDER': image({ src: 'generated/divider.svg', alt: '---', width: '100%' }, config)
+    'DIVIDER': [
+      image(
+        {
+          src: { light: 'generated/divider-light.svg', dark: 'generated/divider-dark.svg' },
+          alt: '---',
+          width: '100%'
+        },
+        config
+      ),
+      '<br>\n'
+    ].join('\n\n')
   };
 
   // Replace the sections

@@ -3,6 +3,7 @@ import { loadConfig } from './config';
 import { generateSVGs } from './generate-svgs';
 import { generateReadme } from './generate-readme';
 import process from 'node:process';
+import fs from 'node:fs';
 
 /**
  * @brief Main entry point for the application
@@ -14,8 +15,14 @@ async function main() {
     // Load configuration
     const config = await loadConfig();
 
+    // Remove generated folders if exists
+    if (fs.existsSync('generated')) {
+      fs.rmSync('generated', { recursive: true });
+    }
+
     // Generate SVGs
-    generateSVGs(config);
+    generateSVGs(config, 'light');
+    generateSVGs(config, 'dark');
 
     // Generate README
     generateReadme(config);

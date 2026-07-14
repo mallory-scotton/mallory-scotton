@@ -1,5 +1,5 @@
 /** Dependencies */
-import { Friend } from '../types';
+import { Friend, PreferredTheme } from '../types';
 import { capitalize, lowercase, stripDomain, SVG } from '../utils';
 
 /**
@@ -7,15 +7,22 @@ import { capitalize, lowercase, stripDomain, SVG } from '../utils';
  * @description This function takes a Friend object and converts it into an SVG representation.
  * @returns An SVG representation of the Friend object.
  */
-export function friend2svg(friend: Friend): SVG {
+export function friend2svg(friend: Friend, theme: PreferredTheme): SVG {
   // Create a new SVG instance
   const svg = new SVG(327, 97);
+
+  // Create the palette
+  const isDarkTheme = theme === 'dark';
+  const palette = {
+    primary: isDarkTheme ? 'white' : 'black',
+    secondary: isDarkTheme ? '#F2F2F2' : '#121212'
+  };
 
   // Add the friend's name
   svg.addText(capitalize(friend.name), {
     fontSize: 21.6,
     fontWeight: 'medium',
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 1,
     y: 0,
     x: 0,
@@ -27,7 +34,7 @@ export function friend2svg(friend: Friend): SVG {
   svg.addText(`${capitalize(friend.title)} — ${capitalize(friend.company)}`, {
     fontSize: 16.5,
     fontWeight: 'light',
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.4,
     y: 35.75,
     x: 0,
@@ -39,7 +46,7 @@ export function friend2svg(friend: Friend): SVG {
   const [bound, _] = svg.addText(lowercase(stripDomain(friend.website)), {
     fontSize: 15.6,
     fontWeight: 'regular',
-    color: '#F2F2F2',
+    color: palette.secondary,
     opacity: 0.6,
     y: 69.75,
     x: 0,
@@ -57,7 +64,7 @@ export function friend2svg(friend: Friend): SVG {
       {
         type: 'path',
         d: `M5.03556 17.5363L4.04102 16.5417L14.3313 6.25141H8.32589V4.83203H16.7453V13.2514H15.3259V7.246L5.03556 17.5363Z`,
-        fill: '#F2F2F2',
+        fill: palette.secondary,
         opacity: 0.6
       }
     ]

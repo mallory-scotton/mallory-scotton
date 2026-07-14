@@ -619,5 +619,8 @@ export class SVG {
 
     // Write the SVG element to the specified file
     fs.writeFileSync(filePath, svg);
+
+    // Console log the save operation
+    console.log(`Saved SVG to ${filePath}`);
   }
 }

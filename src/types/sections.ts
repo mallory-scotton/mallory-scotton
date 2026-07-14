@@ -3,7 +3,7 @@
  * @description Options for configuring images within sections
  */
 export interface ImageOptions {
-  src: string;
+  src: string | { light: string; dark: string };
   alt?: string;
   width?: string;
   height?: string;

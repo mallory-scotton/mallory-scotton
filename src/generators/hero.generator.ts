@@ -10,7 +10,7 @@ import { ShineMove, UpDown } from '../animations';
  * @param config - The profile configuration object containing user details.
  * @returns An SVG representation of the hero section.
  */
-export function hero2svg(config: ProfileConfig): SVG {
+export function hero2svg(config: ProfileConfig /* No need for a theme since we are using a background */): SVG {
   // Create SVG
   const svg = new SVG(1440, 908);
 

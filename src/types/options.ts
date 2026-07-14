@@ -7,6 +7,12 @@ import { SVGFill } from './svg';
 export type FontWeight = 'light' | 'regular' | 'medium';
 
 /**
+ * @brief Preferred theme options
+ * @description This type defines the preferred theme options for the profile.
+ */
+export type PreferredTheme = 'dark' | 'light';
+
+/**
  * @brief Text options for SVG elements
  * @description This interface defines the text-related options for SVG elements.
  */

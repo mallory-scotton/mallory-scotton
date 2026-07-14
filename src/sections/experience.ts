@@ -9,7 +9,13 @@ import { image } from './utils';
  */
 export function getExperienceSection(config: ProfileConfig): string {
   // Generate the title image
-  const title = image({ src: 'generated/titles/experience.svg', alt: 'Experience' }, config);
+  const title = image(
+    {
+      src: { light: 'generated/titles/experience-light.svg', dark: 'generated/titles/experience-dark.svg' },
+      alt: 'Experience'
+    },
+    config
+  );
 
   const experiences = config.experiences.map((experience, index) => {
     // Generate a unique ID for the experience
@@ -22,7 +28,7 @@ export function getExperienceSection(config: ProfileConfig): string {
     // Generate the company image
     const company = image(
       {
-        src: `generated/companies/${id}.svg`,
+        src: { light: `generated/companies/${id}-light.svg`, dark: `generated/companies/${id}-dark.svg` },
         url: experience.website,
         align: 'left',
         alt: experience.company,
@@ -35,7 +41,7 @@ export function getExperienceSection(config: ProfileConfig): string {
     // Generate the experience description image
     const description = image(
       {
-        src: `generated/experiences/${id}.svg`,
+        src: { light: `generated/experiences/${id}-light.svg`, dark: `generated/experiences/${id}-dark.svg` },
         alt: capitalize(experience.position),
         indent: 1,
         align: 'right',

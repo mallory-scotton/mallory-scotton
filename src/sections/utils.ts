@@ -31,19 +31,19 @@ function parseGitHub(input: string): { user: string; repo?: string } | null {
  */
 export function image(options: ImageOptions, config: ProfileConfig): string {
   // Determine the container type and attributes
-  const containerType = options.url ? 'a' : 'picture';
-  const containerAttributes = options.url ? ` href="${options.url}" target="_blank"` : '';
   const alignAttribute = options.align ? `align="${options.align}"` : '';
   const heightAttribute = options.height ? `height="${options.height}"` : '';
   const widthAttribute = options.width ? `width="${options.width}"` : '';
   const altAttribute = options.alt ? `alt="${options.alt}"` : '';
 
   // Determine the image source URL based on the configuration
-  let source = '';
+  let sourceLight = '';
+  let sourceDark = '';
 
   if (config.useRelativeFilePath) {
     // Use relative file path for the image source
-    source = `./${options.src}`;
+    sourceLight = `./${typeof options.src === 'string' ? options.src : options.src.light}`;
+    sourceDark = `./${typeof options.src === 'string' ? options.src : options.src.dark}`;
   } else {
     // Get the Username (and the repository)
     const github = parseGitHub(config.profile.repository);
@@ -54,7 +54,8 @@ export function image(options: ImageOptions, config: ProfileConfig): string {
     }
 
     // Get the source URL for the image
-    source = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${options.src}`;
+    sourceLight = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${typeof options.src === 'string' ? options.src : options.src.light}`;
+    sourceDark = `https://raw.githubusercontent.com/${github.user}/${github.repo ?? github.user}/output/${typeof options.src === 'string' ? options.src : options.src.dark}`;
   }
 
   // Build the attributes string
@@ -70,8 +71,21 @@ export function image(options: ImageOptions, config: ProfileConfig): string {
       comment(options.description, { multiLine: options.multiLine ?? false, indent: (options.indent ?? 0) + 1 }) + '\n';
   }
 
+  let picture = '';
+  const hasUrl = options.url ? true : false;
+  const indentOffset = hasUrl ? '  ' : '';
+
   // Build the image tag
-  return `${indent}<${containerType}${containerAttributes}>\n${description}${indent}  <img src="${source}" ${attributes} />\n${indent}</${containerType}>`;
+  if (typeof options.src === 'string') {
+    picture = `${indent}${indentOffset}<picture>\n${description}${indent}${indentOffset}  <img src="${sourceDark}" ${attributes} />\n${indent}${indentOffset}</picture>`;
+  } else {
+    picture = `${indent}${indentOffset}<picture>\n${description}${indent}${indentOffset}  <source srcset="${sourceDark}" media="(prefers-color-scheme: dark)" />\n${indent}${indentOffset}  <source srcset="${sourceLight}" media="(prefers-color-scheme: light)" />\n${indent}${indentOffset}  <img src="${sourceDark}" ${attributes} />\n${indent}</picture>`;
+  }
+
+  if (options.url) {
+    return `${indent}<a href="${options.url}" target="_blank">\n${picture}\n${indent}</a>`;
+  }
+  return picture;
 }
 
 /**

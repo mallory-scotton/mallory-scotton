@@ -1,8 +1,9 @@
 /** Dependencies */
 import { UPDATED_AT_TEXT } from '../constants';
+import { PreferredTheme } from '../types';
 import { SVG } from '../utils';
 
-export function updatedat2svg(userName: string = 'Mallow'): SVG {
+export function updatedat2svg(userName: string = 'Mallow', theme: PreferredTheme): SVG {
   // Create a new SVG instance
   const svg = new SVG(250, 20);
 
@@ -11,7 +12,7 @@ export function updatedat2svg(userName: string = 'Mallow'): SVG {
     fontSize: 10.3,
     lineHeight: 20,
     fontWeight: 'light',
-    color: '#F2F2F2',
+    color: theme === 'dark' ? '#F2F2F2' : '#121212',
     opacity: 1,
     letterSpacing: 0.2,
     y: 0,

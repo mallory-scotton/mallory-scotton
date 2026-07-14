@@ -11,7 +11,7 @@ export function getFooterSection(config: ProfileConfig): string {
   // Thank you image
   const thanks = image(
     {
-      src: 'generated/thanks.svg',
+      src: { light: 'generated/thanks-light.svg', dark: 'generated/thanks-dark.svg' },
       alt: THANKS_TEXT,
       align: 'left',
       description: THANKS_TEXT
@@ -25,7 +25,7 @@ export function getFooterSection(config: ProfileConfig): string {
   // Last updated image
   const lastUpdate = image(
     {
-      src: 'generated/last-updated.svg',
+      src: { light: 'generated/last-updated-light.svg', dark: 'generated/last-updated-dark.svg' },
       alt: updatedAt,
       align: 'right',
       description: updatedAt

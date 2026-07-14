@@ -5,7 +5,10 @@
     "pseudo": "Mallow",
     "title": "Full-Stack Developer",
     "url": "https://mscotton.framer.website",
-    "signature": "file://images/signature.png",
+    "signature": {
+      "light": "file://images/signature-light.png",
+      "dark": "file://images/signature-dark.png"
+    },
     "repository": "https://github.com/mallory-scotton/mallory-scotton"
   },
   "friends": [

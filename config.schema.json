@@ -18,8 +18,18 @@
           "type": "string"
         },
         "signature": {
-          "type": "string",
-          "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
+          "type": "object",
+          "properties": {
+            "light": {
+              "type": "string",
+              "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
+            },
+            "dark": {
+              "type": "string",
+              "pattern": "file://.*\\.(jpg|jpeg|png|gif)$"
+            }
+          },
+          "required": ["light", "dark"]
         },
         "repository": {
           "type": "string"

@@ -22,7 +22,10 @@ function generateSlide(config: ProfileConfig, index: number): string | null {
   // Generate the slide image
   const slide = image(
     {
-      src: `generated/about/${index}-about.svg`,
+      src: {
+        light: `generated/about/${index}-about-light.svg`,
+        dark: `generated/about/${index}-about-dark.svg`
+      },
       align: index % 2 === 1 ? 'left' : 'right',
       alt: current.title,
       description: `${current.title}${current.description ? '\n' : ''}${(current.description || '')

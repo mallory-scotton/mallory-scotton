@@ -44,7 +44,7 @@ export function profile2svg(config: ProfileConfig, theme: PreferredTheme): SVG {
   });
 
   // Add image
-  const image = svg.addImage(config.profile.signature, 500, 500);
+  const image = svg.addImage(config.profile.signature[theme], 500, 500);
 
   // Add pattern
   const pattern = svg.addPattern({

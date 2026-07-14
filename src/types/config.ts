@@ -31,7 +31,10 @@ export interface Profile {
    * @brief Represents the signature of the user.
    * @description This is the file path to the user's signature image.
    */
-  signature: string;
+  signature: {
+    light: string;
+    dark: string;
+  };
 
   /**
    * @brief Represents the repository URL of the user.

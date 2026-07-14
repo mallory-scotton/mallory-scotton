@@ -31,7 +31,7 @@ export function generateSVGs(config: ProfileConfig, theme: PreferredTheme) {
   Generators.profile2svg(config, theme).save(`generated/profile-${theme}.svg`);
 
   // Generate SVG for thanks message
-  Generators.thanks2svg(THANKS_TEXT, config.profile.signature, theme).save(`generated/thanks-${theme}.svg`);
+  Generators.thanks2svg(THANKS_TEXT, config.profile.signature[theme], theme).save(`generated/thanks-${theme}.svg`);
 
   // Generate SVG for titles
   SECTION_TITLES.forEach((title) => {

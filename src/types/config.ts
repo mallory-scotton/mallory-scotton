@@ -205,6 +205,40 @@ export interface Experience {
 }
 
 /**
+ * @brief Represents the projects of the profile.
+ * @description This interface defines the structure for the user's projects.
+ */
+export interface Project {
+  /**
+   * @brief Represents the Image source of the project.
+   * @description This is the file path to the image representing the project.
+   * @example 'file://generated/projects/gp-engine.svg'
+   */
+  src: string;
+
+  /**
+   * @brief Represents the URL of the project.
+   * @description This is the URL where the project can be accessed or viewed.
+   * @example 'https://github.com/GraphicalPlayground/gp-engine'
+   */
+  url: string;
+
+  /**
+   * @brief Represents the name of the project.
+   * @description This is the display name of the project.
+   * @example 'GP Engine'
+   */
+  name: string;
+
+  /**
+   * @brief Represents the description of the project.
+   * @description This is a brief overview of the project.
+   * @example 'A 2D game engine built with TypeScript and Node.js'
+   */
+  description: string;
+}
+
+/**
  * @brief Represents the hero section of the profile.
  * @description This interface defines the structure for the hero section details.
  */
@@ -266,6 +300,12 @@ export interface ProfileConfig {
    * @description This is an array of the user's links (e.g., social media, portfolio).
    */
   links: Link[];
+
+  /**
+   * @brief Represents the projects of the user.
+   * @description This is an array of the user's projects' details.
+   */
+  projects: Project[];
 
   /**
    * @brief Represents the hero section of the profile.

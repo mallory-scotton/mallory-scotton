@@ -16,6 +16,24 @@ export function getProjectsSection(config: ProfileConfig): string {
     config
   );
 
+  const showcase = config.projects.map((project) => {
+    return [
+      image(
+        {
+          src: project.src.replace('file://', ''),
+          url: project.url,
+          alt: project.name,
+          description: [project.name, project.description].join('\n'),
+          multiLine: true
+        },
+        config
+      ),
+      '\n<br>\n'
+    ]
+      .join('\n')
+      .trim();
+  });
+
   // Generate the content
-  return [title].join('\n\n').trim();
+  return [title, ...showcase].join('\n\n').trim();
 }

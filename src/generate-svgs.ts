@@ -64,4 +64,18 @@ export function generateSVGs(config: ProfileConfig, theme: PreferredTheme) {
   config.about.forEach((slide, index) => {
     Generators.aboutslide2svg(slide, index, theme).save(`generated/about/${index}-about-${theme}.svg`);
   });
+
+  // Copy projects SVGs to the generated folder
+  const projectsDirectory = 'images/projects';
+  if (!fs.existsSync('generated/projects')) {
+    fs.mkdirSync('generated/projects', { recursive: true });
+  }
+  if (fs.existsSync(projectsDirectory)) {
+    const projectFiles = fs.readdirSync(projectsDirectory);
+    projectFiles.forEach((file) => {
+      const sourcePath = `${projectsDirectory}/${file}`;
+      const destinationPath = `generated/projects/${file}`;
+      fs.copyFileSync(sourcePath, destinationPath);
+    });
+  }
 }

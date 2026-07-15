@@ -140,6 +140,44 @@
       "url": "https://drive.google.com/file/d/1DVITYer6wDwGOfLk7GEyCLdbRJ04G7qE/view?usp=sharing"
     }
   ],
+  "projects": [
+    {
+      "name": "GPlayd Engine",
+      "description": "A cross-platform C++ rendering engine designed for deep graphics experimentation. It provides progressive architectural abstractions (RHI, HAL) to seamlessly interface with modern rendering systems including Metal, Vulkan, and DirectX 11/12.",
+      "src": "file://generated/projects/gp-engine.svg",
+      "url": "https://github.com/GraphicalPlayground/gp-engine"
+    },
+    {
+      "name": "PathTracer",
+      "description": "A high-performance, real-time GLSL path tracer built in C++. It features physically-based rendering, BVH acceleration, full material support (BSDF), and integrates OpenImageDenoise for pristine visual output.",
+      "src": "file://generated/projects/pathtracer.svg",
+      "url": "https://github.com/mallory-scotton/pathtracer"
+    },
+    {
+      "name": "R-Type Engine & VR",
+      "description": "A robust C++ multiplayer game engine built to recreate the classic R-Type experience using Asio for networking. It goes beyond 2D by integrating OpenVR to run a fully functional Beat Saber clone.",
+      "src": "file://generated/projects/rtype.svg",
+      "url": "https://github.com/mallory-scotton/rtype"
+    },
+    {
+      "name": "NES Emulator",
+      "description": "A low-level C++ emulator bringing classic games back to life with accurate 6502 CPU, APU, and PPU emulation. It supports popular mappers for high game compatibility and uses custom GLSL shaders to recreate a retro CRT look.",
+      "src": "file://generated/projects/nes-emulator.svg",
+      "url": "https://github.com/mallory-scotton/nes-emulator"
+    },
+    {
+      "name": "Arcade",
+      "description": "A dynamic, modular retro gaming platform built in C++. It uses dynamic library loading to let players hot-swap between games (like a 1:1 Namco Pac-Man, Tetris, or Nibbler) and graphic interfaces (OpenGL, Ncurses, SFML, SDL2) on the fly.",
+      "src": "file://generated/projects/arcade.svg",
+      "url": "https://github.com/mallory-scotton/arcade"
+    },
+    {
+      "name": "MyRPG",
+      "description": "A comprehensive 2D RPG built entirely in C and CSFML. Inspired by Ak-xolotl, this project features a fully custom integrated level editor, allowing for endless replayability and easy world-building.",
+      "src": "file://generated/projects/my_rpg.svg",
+      "url": "https://github.com/mallory-scotton/my_rpg"
+    }
+  ],
   "hero": {
     "title": "Founder of Graphical Playground.",
     "subtitle": "Formerly at Sonar Source, SBS and EPITECH.",

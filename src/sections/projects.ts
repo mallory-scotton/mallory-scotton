@@ -28,9 +28,9 @@ export function getProjectsSection(config: ProfileConfig): string {
         },
         config
       ),
-      '\n<br>\n'
+      '<br>\n<br>\n<br>\n<br>\n',
     ]
-      .join('\n')
+      .join('\n\n')
       .trim();
   });
 

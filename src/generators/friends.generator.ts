@@ -25,7 +25,7 @@ export function friend2svg(friend: Friend, theme: PreferredTheme): SVG {
     color: palette.secondary,
     opacity: 1,
     y: 0,
-    x: 0,
+    x: 25,
     letterSpacing: 0.1,
     lineHeight: 30
   });
@@ -37,7 +37,7 @@ export function friend2svg(friend: Friend, theme: PreferredTheme): SVG {
     color: palette.secondary,
     opacity: 0.4,
     y: 35.75,
-    x: 0,
+    x: 25,
     letterSpacing: 0.5,
     lineHeight: 23
   });
@@ -49,7 +49,7 @@ export function friend2svg(friend: Friend, theme: PreferredTheme): SVG {
     color: palette.secondary,
     opacity: 0.6,
     y: 69.75,
-    x: 0,
+    x: 25,
     letterSpacing: 0.3,
     lineHeight: 23
   });
@@ -58,7 +58,7 @@ export function friend2svg(friend: Friend, theme: PreferredTheme): SVG {
   svg.addChild({
     type: 'g',
     style: {
-      transform: `translate(${bound.x + bound.width + 2}px, 72px)`
+      transform: `translate(${bound.x + 30 + bound.width + 2}px, 72px)`
     },
     children: [
       {

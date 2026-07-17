@@ -19,6 +19,28 @@ export function getFooterSection(config: ProfileConfig): string {
     config
   );
 
+  // Footer link image
+  const footerLinks = image(
+    {
+      src: { light: 'generated/footer-link-light.svg', dark: 'generated/footer-link-dark.svg' },
+      alt: 'Footer Link',
+      align: 'right',
+      description: 'Footer Link'
+    },
+    config
+  );
+
+  // Copyright image
+  const copyright = image(
+    {
+      src: { light: 'generated/copyright-light.svg', dark: 'generated/copyright-dark.svg' },
+      alt: `© ${new Date().getFullYear()} ${config.profile.name}. All rights reserved.`,
+      align: 'left',
+      description: `© ${new Date().getFullYear()} ${config.profile.name}. All rights reserved.`
+    },
+    config
+  );
+
   // Updated at text
   const updatedAt = UPDATED_AT_TEXT(config.profile.pseudo);
 
@@ -34,5 +56,9 @@ export function getFooterSection(config: ProfileConfig): string {
   );
 
   // Return the footer section
-  return `${thanks}\n\n${lastUpdate}`.trim();
+  return [
+    ['<div>', thanks, footerLinks, '</div>'].join('\n\n'),
+    ['<div>', copyright, lastUpdate, '</div>'].join('\n\n'),
+    ''
+  ].join('\n\n<br>\n\n');
 }

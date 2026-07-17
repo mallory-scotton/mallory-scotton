@@ -21,6 +21,12 @@ export function generateSVGs(config: ProfileConfig, theme: PreferredTheme) {
   // Generate SVG for last updated
   Generators.updatedat2svg(config.profile.pseudo, theme).save(`generated/last-updated-${theme}.svg`);
 
+  // Generate SVG for copyright
+  Generators.copyright2svg(config, theme).save(`generated/copyright-${theme}.svg`);
+
+  // Generate SVG for the footer links (empty for the moment)
+  Generators.footerlink2svg('footer-link', theme).save(`generated/footer-link-${theme}.svg`);
+
   // Generate SVG for divider
   Generators.divider2svg(theme).save(`generated/divider-${theme}.svg`);
 

@@ -1,7 +1,7 @@
 {
   "$schema": "./config.schema.json",
   "profile": {
-    "name": "Mallory SCOTTON",
+    "name": "Mallory Scotton",
     "pseudo": "Mallow",
     "title": "Full-Stack Developer",
     "url": "https://mscotton.framer.website",

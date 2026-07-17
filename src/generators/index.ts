@@ -10,3 +10,5 @@ export * from './thanks.generator';
 export * from './experience.generator';
 export * from './hero.generator';
 export * from './about.generator';
+export * from './copyright.generator';
+export * from './footerlink.generator';

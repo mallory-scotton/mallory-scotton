@@ -21,7 +21,7 @@
     {
       "name": "Hugo Cathelain",
       "title": "Student",
-      "company": "Epitech",
+      "company": "Keimyung University",
       "website": "https://www.github.com/Hugo-Cathelain"
     },
     {
@@ -35,6 +35,24 @@
       "title": "Student",
       "company": "Epitech",
       "website": "https://www.github.com/bombabobo"
+    },
+    {
+      "name": "Cécilia Deriche",
+      "title": "Student",
+      "company": "Keimyung University",
+      "website": "https://www.linkedin.com/in/cécilia-deriche-65b8b8308/"
+    },
+    {
+      "name": "Louis Malaval",
+      "title": "Student",
+      "company": "Keimyung University",
+      "website": "https://www.linkedin.com/in/louis-malaval-90ba552a7/"
+    },
+    {
+      "name": "Jonathan Lotz",
+      "title": "Student",
+      "company": "Keimyung Unversity",
+      "website": "https://www.linkedin.com/in/jonathan-lotz-44b7932a3/"
     }
   ],
   "experiences": [

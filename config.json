@@ -51,8 +51,20 @@
     {
       "name": "Jonathan Lotz",
       "title": "Student",
-      "company": "Keimyung Unversity",
+      "company": "Keimyung University",
       "website": "https://www.linkedin.com/in/jonathan-lotz-44b7932a3/"
+    },
+    {
+      "name": "Killian Quintin",
+      "title": "Student"
+      "company": "Keimyung University",
+      "website": "https://www.linkedin.com/in/killian-quintin-85b6aa2a8/"
+    },
+    {
+      "name": "Alexis Carrera - Romano",
+      "title": "Student"
+      "company": "Keimyung University",
+      "website": "https://www.linkedin.com/in/alexis-carrera-romano-78917bl/"
     }
   ],
   "experiences": [

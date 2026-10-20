@@ -128,8 +128,7 @@ export async function optimizeSVGs(generatedDir: string) {
         // 'removeRasterImages',
         'mergePaths',
         'convertShapeToPath',
-        'sortAttrs',
-        'removeDimensions'
+        'sortAttrs'
       ]
     });
 

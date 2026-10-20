@@ -2,6 +2,7 @@
 import { loadConfig } from './config';
 import { generateSVGs } from './generate-svgs';
 import { generateReadme } from './generate-readme';
+import { optimizeSVGs } from './optimize-svgs';
 import process from 'node:process';
 import fs from 'node:fs';
 
@@ -23,6 +24,9 @@ async function main() {
     // Generate SVGs
     generateSVGs(config, 'light');
     generateSVGs(config, 'dark');
+
+    // Optimize SVGs
+    await optimizeSVGs('generated');
 
     // Generate README
     generateReadme(config);

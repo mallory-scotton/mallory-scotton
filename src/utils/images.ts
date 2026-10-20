@@ -2,13 +2,29 @@
 import fs from 'fs';
 import path from 'path';
 import { imageSize } from 'image-size';
-import { ISizeCalculationResult } from 'image-size/dist/types/interface';
 
 /**
  * @brief The directory where images are stored.
  * @description This is the directory where images are stored.
  */
 export const TEMP_DIR = path.join(__dirname, '../../temp');
+
+/**
+ * @brief Interface representing the size of an image.
+ */
+export interface ISize {
+  width: number;
+  height: number;
+  orientation?: number;
+  type?: string;
+}
+
+/**
+ * @brief Type representing the result of an image size calculation.
+ */
+export type ISizeCalculationResult = {
+  images?: ISize[];
+} & ISize;
 
 /**
  * @brief Converts an image file to a Data URL.

@@ -40,6 +40,7 @@ export function generateReadme(config: ProfileConfig) {
     'FRIENDS': sections.getFriendsSection(config),
     'FOOTER': sections.getFooterSection(config),
     'DIVIDER': [
+      '<br>\n<br>\n',
       image(
         {
           src: { light: 'generated/divider-light.svg', dark: 'generated/divider-dark.svg' },
@@ -48,7 +49,7 @@ export function generateReadme(config: ProfileConfig) {
         },
         config
       ),
-      '<br>\n'
+      '<br>\n<br>\n'
     ].join('\n\n')
   };
 
